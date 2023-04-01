@@ -1,0 +1,78 @@
+version: "3.1"
+
+rules:
+
+- rule: Present yourself when the user greets you
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Say what the office hours are when the users want to know them
+  steps:
+  - intent: office_hours
+  - action: action_show_office_hours
+
+- rule: Say 'You are welcome' when user is happy with the info provided
+  steps:
+  - intent: gratitude
+  - action: utter_youre_welcome
+  
+- rule: Provide information about healthcare if prompted
+  steps:
+  - intent: health_issues
+  - action: utter_health_issues
+
+- rule: Respond to questions about university canteens
+  steps:
+  - intent: canteen
+  - action: utter_canteen
+  
+- rule: Provide information about ESN if prompted
+  steps:
+  - intent: esn
+  - action: utter_esn
+  
+- rule: Provide information about accomodation if prompted
+  steps:
+  - intent: accommodation
+  - action: utter_accommodation
+  
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase
+- rule: Give answer about Ryanair discount
+  steps:
+  - intent: ryanair_discount
+  - action: utter_ryanair_discount
+
+- rule: Activate newsletter form
+  steps:
+  - intent: subscribe
+  - action: newsletter_form
+  - active_loop: newsletter_form
+
+- rule: Submit newsletter form
+  condition:
+  - active_loop: newsletter_form
+  steps:
+  - action: newsletter_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_subscribed
+
+- rule: Provide information about ESN if prompted
+  steps:
+  - intent: buy_esn_card
+  - action: utter_buy_esn_card

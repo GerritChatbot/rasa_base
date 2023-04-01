@@ -1,0 +1,22 @@
+version: '3.1'
+responses:
+  utter_greet:
+  - text: Hey! I am Gerrit but you can call me Desi. How can I help?
+    button_type: vertical
+    buttons:
+    - title: "How can you help?"
+      payload: "/capacity_of_chatbot"
+    - title: "Subscribe for newsletter"
+      payload: "/subscribe"
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_functionality:
+  - text: At the moment I can only tell you when are the office hours of ESN CU.
+  utter_youre_welcome:
+  - text: You're welcome!
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_buy_esn_card:
+  - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999 and pick it up during the Office Hours

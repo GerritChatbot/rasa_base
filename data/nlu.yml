@@ -1,0 +1,159 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - sup
+    - whatsup
+    - how you doin'
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: capacity_of_chatbot
+  examples: |
+    - how can you help me?
+    - what can you do?
+    - what can you do to help me?
+    - what are the things you can do?
+    - what are the things you can help me with?
+    - what do you do?
+- intent: office_hours
+  examples: |
+    - when are office hours?
+    - what day is office open?
+    - which day will be the office open?
+    - when can I go to office?
+- intent: gratitude
+  examples: |
+    - thank you
+    - that is very useful
+    - thanks
+    - thank you for letting me know
+    - thanks for the info
+- intent: health_issues
+  examples: |
+    - what should I do when I need doctor?
+    - i’m sick, where can I find help?
+    - i have a problem, where is a doctor?
+    - i need a doctor, where can I find someone?
+    - how does healthcare for foreign students work?
+    - what should I do when I feel sick?
+    - i don’t feel well, where is a doctor?
+    - i don’t feel well, what should I do?
+    - where should I look for help, if I don’t feel well?
+    - i’m sick.
+    - where should I look for medical help?
+    - what should do when I neeed a doctor?
+    - i need a doctor. Could you help me?
+    - i am feeling sick. Could you help me?
+    - where is the nearest dostor fore erasmus/foreign students?
+    - where to find the nearest doctor/hospital?
+    - how do I get to the nearest doctor?
+    - could you give me info about the healthcare/doctor for erasmus/foreign students?
+    - i need information about opening hours of the hospitals/dostors near me.
+    - i am having some health complications, where can I find help?
+    - i need an ambulance.
+- intent: canteen
+  examples: |
+    - is there a cheap place to eat near the university?
+    - where can i get inexpensive food?
+    - any recommendations for a lunch place?
+    - are there any restaurants for students?
+    - is there a canteen at the university?
+    - does the university have any cheap lunch places?
+    - where can i eat
+    - where can i get lunch at the university?
+    - i'm hungry.
+- intent: esn
+  examples: |
+    - what is erasmus student network?
+    - what does esn do?
+    - what does esn mean?
+    - what does esn stand for?
+    - is esn an abbreviation?
+    - how can the student network help me?
+    - what do you guys do?
+    - tell me about esn.
+- intent: accommodation
+  examples: |
+    - how can i find accommodation in prague?
+    - where am i going to live during my stay?
+    - how do i find an apartment?
+    - is it possible to live in a dormitory during my erasmus?
+    - i need cheap accommodation.
+    - where can i apply for a dorm room?
+    - does the university offer housing?
+- intent: ryanair_discount
+  examples: |
+    - My Ryanair validation on their website doesn’t work, what should I do?
+    - I want Ryanair discount, what should I do?
+    - I cannot access my Ryanair validation on company’s website, what should I do?
+    - Can I have discount at Ryanair with ESNcard?
+    - What can I do to get a Ryanair discount?
+    - Where do I find validation on Ryanair website for my ESNcard?
+    - Validation doesn’t work and I need discount at Ryanair, please help me!
+- intent: subscribe
+  examples: |
+    - I want to get the newsletter
+    - Can you send me the newsletter?
+    - Can you sign me up for the newsletter?
+    - I want to subscribe to a newsletter.
+    - i want to subscribe for the newsletter
+- intent: inform_email
+  examples: |
+    - My email is [amazing_person12@gmail.com](email)
+    - [pierrebaguette@hotmail.fr](email)
+    - Please send it to [anything@example.com](email)
+    - Email is [something@example.com](email)
+    - [richard.mazur9@gmail.com](email)
+- intent: inform_frequency
+  examples: |
+    - every week
+    - once a week
+    - twice per month
+    - as ofter as possible
+    - once a month
+    - weekly
+- intent: buy_esn_card
+  examples: |
+    - i want to buy esncard
+    - can I get esn card please?
+    - how can I get card from esn
+    - where can I get the esn discount card
+    - i would like to purchase the special esn discount
+    - esn card
+    - I would like to have the esn card
+- intent: what_is_my_subscription_email
+  examples: |
+    - what is my subscription mail
+    - do you have an email associated with my subscription?
+    - what email are you using for newsletter?
+    - where are you sending newsletter?
+

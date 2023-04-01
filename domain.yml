@@ -1,0 +1,92 @@
+version: '3.1'
+intents:
+- accomodation
+- bot_challenge
+- canteen
+- capacity_of_chatbot
+- esn
+- goodbye
+- gratitude
+- greet
+- health_issues
+- inform
+- inform_email
+- inform_frequency
+- office_hours
+- out_of_scope
+- ryanair_discount
+- subscribe
+- thankyou
+- buy_esn_card
+entities:
+- email
+responses:
+  utter_greet:
+  - text: Hey! I am Gerrit but you can call me Desi. How can I help?
+    button_type: vertical
+    buttons:
+    - title: "How can you help?"
+      payload: "/capacity_of_chatbot"
+    - title: "Subscribe for newsletter"
+      payload: "/subscribe"
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_functionality:
+  - text: At the moment I can only tell you when are the office hours of ESN CU.
+  utter_youre_welcome:
+  - text: You're welcome!
+  utter_health_issues:
+  - text: In case you need an ambulance, please call 155.. There is an emergency room in every hospital. Look at the list of public hospitals HERE. You can also contact MUDr. Květoslava Vernerová (+420 274 869 934). She has an office near Hostivař.
+  utter_canteen:
+  - text: There are six university canteens you can go to, for example Menza Právnická or Menza Arnošta z Pardubic. You can find more information here https://kam.cuni.cz/KAMEN-70.html. Please note that Menza Hostivař and Menza Jednota are closed for reconstruction, and Menza Na Kotli is not located in Prague!
+  utter_esn:
+  - text: ESN (Erasmus Student Network) is an organisation made up of volunteers - students and alumni - who help international students who come to Prague for their Erasmus exchange. We help them get used to being in a new city and make new friends by organising plenty of events for them as well as being there for their questions about life in Prague. You can read more on our webpage https://esncuprague.cz/about-us
+  utter_accomodation:
+  - text: Charles University offers housing for students. You can find more information about it here https://cuni.cz/UKEN-365.html#2. Another possibility is to try to find an apartment by searching through facebook groups or other websites such as https://www.flatio.com/#_ga or https://www.forstudents.cz/
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_ryanair_discount:
+  - text: For the Ryanair discount, you have to register your ESNcard on http://esncard.org. Then you have to log in to Ryanair and go to ERASMUS column and fill in your personal details. You have to make sure that your personal details are the same as you have in your ESNcard registration.
+  utter_subscribe:
+  - text: Please answer the following question in order to subscribe
+  utter_ask_email:
+  - text: What is your email address?
+  utter_ask_frequency:
+  - text: How often do you want to receive emails from me?
+  utter_subscribed:
+  - text: You're all set! Check your inbox at {email} to confirm your subscription. You will receive emails {frequency}.
+  utter_buy_esn_card:
+  - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999 and pick it up during the Office Hours
+
+slots:
+  email:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: email
+      conditions:
+      - active_loop: newsletter_form
+  frequency:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      intent: inform_frequency
+      conditions:
+      - active_loop: newsletter_form
+forms:
+  newsletter_form:
+    required_slots:
+    - email
+    - frequency
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+actions:
+- utter_greet
+- utter_subscribed
+- action_show_office_hours
+- action_say_subscription_email

@@ -1,0 +1,6 @@
+version: '3.1'
+intents:
+- health_issues
+responses:
+  utter_health_issues:
+    - text: In case you need an ambulance, please call 155.. There is an emergency room in every hospital. Look at the list of public hospitals HERE. You can also contact MUDr. Květoslava Vernerová (+420 274 869 934). She has an office near Hostivař.
