@@ -5,7 +5,6 @@ intents:
 - goodbye
 - gratitude
 - greet
-- office_hours
 - out_of_scope
 - thankyou
 - buy_esn_card
