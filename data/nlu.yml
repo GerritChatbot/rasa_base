@@ -156,6 +156,7 @@ nlu:
     - do you have an email associated with my subscription?
     - what email are you using for newsletter?
     - where are you sending newsletter?
+  #TODO add intent - what_is_my_subscription_frequency
 - intent: pay_by_cash
   examples: |
     - can i pay by cash
