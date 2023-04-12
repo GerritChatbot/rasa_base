@@ -74,6 +74,6 @@ class ShowOfficeHoursTime(Action):
         dispatcher.utter_message(
             text=f"The nearest Office Hours are on {nearest_row_in_future['date'][0].strftime('%d/%m/%Y')} "
                  f"from {nearest_row_in_future['time_range_start'][0]} "
-                 f"till {nearest_row_in_future['time_range_end'][0]}")
-
+                 f"till {nearest_row_in_future['time_range_end'][0]} "
+                 f"in our address XY")
         return []
