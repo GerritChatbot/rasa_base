@@ -43,7 +43,7 @@ rules:
   - intent: esn
   - action: utter_esn
   
-- rule: Provide information about accomodation if prompted
+- rule: Provide information about accommodation if prompted
   steps:
   - intent: accommodation
   - action: utter_accommodation
