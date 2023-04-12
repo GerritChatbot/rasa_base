@@ -7,8 +7,8 @@ intents:
 - subscribe
 - what_is_my_subscription_email
 actions:
-  - utter_subscribed
-  - action_say_subscription_email
+- utter_subscribed
+- action_what_is_my_subscription_email
 responses:
   utter_subscribe:
     - text: Please answer the following question in order to subscribe
