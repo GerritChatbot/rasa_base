@@ -1,4 +1,4 @@
 version: '3.1'
 actions:
 - utter_greet
-- action_show_office_hours
+- utter_pay_by_cash

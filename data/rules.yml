@@ -73,6 +73,11 @@ rules:
     - requested_slot: null
   - action: utter_subscribed
 
+- rule: pay by cash
+  steps:
+  - intent: pay_by_cash
+  - action: utter_pay_by_cash
+
 - rule: Provide information about ESN if prompted
   steps:
   - intent: buy_esn_card

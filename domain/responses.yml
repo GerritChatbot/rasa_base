@@ -20,3 +20,9 @@ responses:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_buy_esn_card:
   - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999 and pick it up during the Office Hours
+  utter_pay_by_cash:
+  - text: If you prefer to pay by cash you can pick up the ESNcard in person during our Office hours
+    button_type: vertical
+    buttons:
+      - title: "Show Office hours"
+        payload: "/office_hours"

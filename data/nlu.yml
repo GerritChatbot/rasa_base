@@ -156,4 +156,11 @@ nlu:
     - do you have an email associated with my subscription?
     - what email are you using for newsletter?
     - where are you sending newsletter?
+- intent: pay_by_cash
+  examples: |
+    - can i pay by cash
+    - what if i want to pay by cash
+    - is it possible not to pay online
+    - i prefer to pay with real money
+    - i can only pay cash
 

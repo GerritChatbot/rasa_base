@@ -45,3 +45,5 @@ stories:
   - action: utter_greet
   - intent: buy_esn_card
   - action: utter_buy_esn_card
+  - intent: pay_by_cash
+  - action: utter_pay_by_cash
