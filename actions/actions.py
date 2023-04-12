@@ -39,7 +39,7 @@ project_root_dir = os.path.dirname(actions_dir)
 class ActionSaySubscriptionEmail(Action):
 
     def name(self) -> Text:
-        return "action_say_subscription_email"
+        return "action_what_is_my_subscription_email"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
