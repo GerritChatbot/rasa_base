@@ -172,4 +172,11 @@ nlu:
     - is it possible not to pay online
     - i prefer to pay with real money
     - i can only pay cash
+- intent: get_event
+  examples: |
+    - i want to go to [pubquiz](event)
+    - can i go to [pub quiz](event)
+    - can you tell me about the upcoming [Pub Quiz](event)
+    - [pub quiz](event) please
+    - give me more information about the [pub quiz](event)
 
