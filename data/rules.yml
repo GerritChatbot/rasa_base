@@ -87,3 +87,8 @@ rules:
   steps:
   - intent: what_is_my_subscription_email
   - action: action_what_is_my_subscription_email
+
+- rule: get event
+  steps:
+  - intent: get_event
+  - action: action_get_event
