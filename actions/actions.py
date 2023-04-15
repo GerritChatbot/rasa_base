@@ -65,6 +65,7 @@ class ShowOfficeHoursTime(Action):
         df['date'] = pd.to_datetime(df['date'], format='%d%m%Y')
         df = df.set_index('date')
 
+        #TODO turn into a function that I can reuse to search for nearest date?
         today = date.today()
         d1 = today.strftime("%d/%m/%Y")
 
@@ -77,3 +78,53 @@ class ShowOfficeHoursTime(Action):
                  f"till {nearest_row_in_future['time_range_end'][0]} "
                  f"in our address XY")
         return []
+class GetEvent(Action):
+
+    def name(self) -> Text:
+        return "action_get_event"
+
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        event_name = tracker.get_slot("event")
+        print(event_name)
+
+        current_month = date.today().strftime("%B")
+        print(current_month)
+        current_day = date.today().day
+        print(current_day)
+
+        sheets = pd.ExcelFile(os.path.join(project_root_dir, "external_data_test", "events.xlsx")).sheet_names
+
+        # find substring "current_month" in sheets
+        closest_sheet = [sheet for sheet in sheets if current_month in sheet][0]
+        print(closest_sheet)
+        df = pd.read_excel(os.path.join(project_root_dir, "external_data_test", "events.xlsx"),
+                           sheet_name=closest_sheet)
+        print(df.keys())
+        event_data = df[df["EVENT"] == event_name]
+        print(event_data)
+        print(event_data.get("DATE"))
+
+        df_sort = event_data.iloc[(event_data['DATE'] - current_day).abs().argsort()[:2]]
+        print(df_sort)
+        df_sort_list = df_sort.index.tolist()
+
+        final_index = [x for x in df_sort_list if x >= current_day]
+        final_data = df.iloc[final_index]
+        final_date = int(final_data["DATE"].values[0])
+        final_event_name = final_data["EVENT"].values[0]
+        final_start_hour = final_data["START"].values[0]
+        final_end_hour = final_data["END"].values[0]
+        final_price = final_data["PRICE"].values[0]
+        final_place = final_data["PLACE"].values[0]
+        final_registration_form = final_data["REGISTRATION FORM\n(link na drive)"].values[0]
+        print(
+            f"The event {final_event_name} is taking place on {final_date}. from {final_start_hour} till {final_end_hour} "
+            f"on the address {final_place}. It costs {final_price} and you can register here: {final_registration_form}")
+
+        dispatcher.utter_message(
+            text=f"The event {final_event_name} is taking place on {final_date}. from {final_start_hour} till {final_end_hour} "
+            f"on the address {final_place}. It costs {final_price} and you can register here: {final_registration_form}")
+        return []
+
