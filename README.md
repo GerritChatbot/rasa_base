@@ -14,3 +14,8 @@ Pro testování chatbota doporučuji přes tento příkaz
 ```
 rasa shell
 ```
+
+Pro spusteni deploymentu pouzij prikaz
+```commandline
+ansible-playbook -v -t deploy deploy/main.yml -i deploy/hosts.yml --extra-vars droplet_ip=$DROPLET_IP
+```
