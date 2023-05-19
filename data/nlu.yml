@@ -58,6 +58,10 @@ nlu:
     - what day is office open?
     - which day will be the office open?
     - when can I go to office?
+    - is office open today
+    - give me office hours
+    - where is the office
+    - how to get to your office
 - intent: gratitude
   examples: |
     - thank you
@@ -78,14 +82,14 @@ nlu:
     - where should I look for help, if I don’t feel well?
     - i’m sick.
     - where should I look for medical help?
-    - what should do when I neeed a doctor?
+    - what should do when I need a doctor?
     - i need a doctor. Could you help me?
     - i am feeling sick. Could you help me?
-    - where is the nearest dostor fore erasmus/foreign students?
+    - where is the nearest doctor fore erasmus/foreign students?
     - where to find the nearest doctor/hospital?
     - how do I get to the nearest doctor?
     - could you give me info about the healthcare/doctor for erasmus/foreign students?
-    - i need information about opening hours of the hospitals/dostors near me.
+    - i need information about opening hours of the hospitals/doctors near me.
     - i am having some health complications, where can I find help?
     - i need an ambulance.
 - intent: canteen
@@ -109,6 +113,8 @@ nlu:
     - how can the student network help me?
     - what do you guys do?
     - tell me about esn.
+    - i have only now heard of esn what is it
+    - please can you elaborate on esn
 - intent: accommodation
   examples: |
     - how can i find accommodation in prague?
@@ -158,6 +164,7 @@ nlu:
     - i would like to purchase the special esn discount
     - esn card
     - I would like to have the esn card
+    - where can i pick up my esncard
 - intent: what_is_my_subscription_email
   examples: |
     - what is my subscription mail

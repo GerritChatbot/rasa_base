@@ -73,10 +73,10 @@ class ShowOfficeHoursTime(Action):
         nearest_row_in_future = df.iloc[[index_of_nearest_row_in_future]].reset_index()
 
         dispatcher.utter_message(
-            text=f"The nearest Office Hours are on {nearest_row_in_future['date'][0].strftime('%d/%m/%Y')} "
-                 f"from {nearest_row_in_future['time_range_start'][0]} "
-                 f"till {nearest_row_in_future['time_range_end'][0]} "
-                 f"in our address XY")
+            text=f"The office address is Jednota Dormitory, Opletalova 1663/38 and the nearest office hours are on "
+                 f"{nearest_row_in_future['date'][0].strftime('%d/%m/%Y')} "
+                 f"from {nearest_row_in_future['time_range_start'][0]}h "
+                 f"till {nearest_row_in_future['time_range_end'][0]}h ")
         return []
 class GetEvent(Action):
 

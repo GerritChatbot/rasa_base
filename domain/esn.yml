@@ -3,4 +3,4 @@ intents:
 - esn
 responses:
   utter_esn:
-    - text: ESN (Erasmus Student Network) is an organisation made up of volunteers - students and alumni - who help international students who come to Prague for their Erasmus exchange. We help them get used to being in a new city and make new friends by organising plenty of events for them as well as being there for their questions about life in Prague. You can read more on our webpage https://esncuprague.cz/about-us
+    - text: Erasmus Student Network (ESN) is a volunteer organisation which supports international students during their Erasmus exchange in Prague through events, guidance, and friendship.

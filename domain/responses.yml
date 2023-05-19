@@ -1,7 +1,7 @@
 version: '3.1'
 responses:
   utter_greet:
-  - text: Hey! I am Gerrit but you can call me Desi. How can I help?
+  - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you need.
     button_type: vertical
     buttons:
     - title: "How can you help?"
@@ -11,15 +11,27 @@ responses:
   utter_goodbye:
   - text: Bye
   utter_iamabot:
-  - text: I am a bot, powered by Rasa.
+  - text: I am a bot, created with love by ESN CU Prague.
   utter_functionality:
-  - text: At the moment I can only tell you when are the office hours of ESN CU.
+  - text: |
+      Right now I know how to do the following, just ask away:
+      - find office hours
+      - give recommendation on where to live in Prague
+      - where are university canteens
+      - help you when you need a doctor
+      - and some other things as well!
   utter_youre_welcome:
   - text: You're welcome!
   utter_please_rephrase:
   - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_buy_esn_card:
-  - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999 and pick it up during the Office Hours
+  - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999 and pick it up during the office hours
+    button_type: vertical
+    buttons:
+      - title: "When are the office hours?"
+        payload: "/intent_office_hours"
+      - title: "Can I pay cash?"
+        payload: "/intent_pay_by_cash"
   utter_pay_by_cash:
   - text: If you prefer to pay by cash you can pick up the ESNcard in person during our Office hours
     button_type: vertical
