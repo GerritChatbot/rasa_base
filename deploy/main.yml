@@ -16,6 +16,11 @@
         ansible.builtin.shell: pkill rasa
         args:
           chdir: /root/rasa_base
+        register: pkill_result
+        ignore_errors: True
+      # pkill signals errors via RC > 1
+      - fail: msg="pkill execution has failed because of errors."
+        when: pkill_result.rc > 1
   - name: Deploy rasa
     tags: deploy
     block:
