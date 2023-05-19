@@ -1,9 +1,9 @@
 name: Deploy rasa
 run-name: Deploying Rasa
-on: [push]
-#  push:
-#    branches:
-#      - main
+on:
+  push:
+    branches:
+      - main
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
