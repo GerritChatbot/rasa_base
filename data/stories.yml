@@ -4,8 +4,8 @@ stories:
 
 - story: happy path
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: start
+  - action: utter_start
   - intent: capacity_of_chatbot
   - action: utter_functionality
   - intent: office_hours
@@ -15,14 +15,14 @@ stories:
 
 - story: interactive_story_1
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: start
+  - action: utter_start
 
 
 - story: interactive_story_1
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: start
+  - action: utter_start
   - intent: subscribe
   - action: newsletter_form
   - active_loop: newsletter_form
@@ -41,8 +41,8 @@ stories:
 
 - story: esncard happy path
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: start
+  - action: utter_start
   - intent: buy_esn_card
   - action: utter_buy_esn_card
   - intent: pay_by_cash

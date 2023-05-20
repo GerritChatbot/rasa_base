@@ -5,8 +5,8 @@ rules:
 - rule: Present yourself when the user greets you
   conversation_start: true
   steps:
-  - intent: greet
-  - action: utter_greet
+  - intent: start
+  - action: utter_start
 
 - rule: Say goodbye anytime the user says goodbye
   steps:

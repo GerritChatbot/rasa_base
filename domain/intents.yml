@@ -4,7 +4,7 @@ intents:
 - capacity_of_chatbot
 - goodbye
 - gratitude
-- greet
+- start
 - out_of_scope
 - thankyou
 - buy_esn_card

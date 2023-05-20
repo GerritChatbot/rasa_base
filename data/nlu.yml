@@ -8,7 +8,7 @@ nlu:
     - pubkviz
     - pubquis
     - pub quis
-- intent: greet
+- intent: start
   examples: |
     - hey
     - hello
