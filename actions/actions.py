@@ -36,6 +36,28 @@ full_path = os.path.realpath(__file__)
 actions_dir = os.path.dirname(full_path)
 project_root_dir = os.path.dirname(actions_dir)
 
+
+class SpecialStringAction(Action):
+    def name(self) -> Text:
+        return "action_handle_special_string"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        user_input = tracker.latest_message.get("text")
+
+        # Define the special strings and their corresponding intents
+        special_strings = {
+            "/start": "capacity_of_chatbot",
+            # Add more special strings and intents as needed
+        }
+
+        for special_string, intent in special_strings.items():
+            if special_string in user_input:
+                # Trigger the intent by generating UserUttered event
+                dispatcher.utter_message(user_input, intent=intent)
+                break
+
+        return []
+
 class ActionSaySubscriptionEmail(Action):
 
     def name(self) -> Text:
