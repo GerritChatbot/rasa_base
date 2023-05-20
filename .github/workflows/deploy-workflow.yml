@@ -1,0 +1,25 @@
+name: Deploy rasa
+run-name: Deploying Rasa
+on:
+  push:
+    branches:
+      - main
+jobs:
+  check-bats-version:
+    runs-on: ubuntu-latest
+    environment: deploy
+    steps:
+      - uses: actions/checkout@v3
+      - run: pwd
+      - name: Run playbook
+        uses: dawidd6/action-ansible-playbook@v2
+        with:
+          # Required, playbook filepath
+          playbook: deploy/main.yml
+          # Optional, SSH private key
+          key: ${{secrets.SSH_PRIVATE_KEY}}
+          # Optional, additional flags to pass to ansible-playbook
+          options: |
+            --inventory deploy/hosts.yml 
+            --extra-vars droplet_ip=${{ vars.DROPLET_IP }}
+            --verbose

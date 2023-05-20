@@ -1,0 +1,52 @@
+- name: Update web servers
+  hosts: localhost
+
+  tasks:
+  - name: test local task
+    ansible.builtin.shell: echo "hello"
+
+
+- name: Deploy to droplet
+  hosts: droplet
+  tasks:
+  - name: stop rasa if running
+    tags: stop
+    block:
+      - name: Kill rasa processes
+        ansible.builtin.shell: pkill rasa
+        args:
+          chdir: /root/rasa_base
+        register: pkill_result
+        ignore_errors: True
+      # pkill signals errors via RC > 1
+      - fail: msg="pkill execution has failed because of errors."
+        when: pkill_result.rc > 1
+  - name: Deploy rasa
+    tags: deploy
+    block:
+    - name: Git checkout
+      ansible.builtin.git:
+        repo: 'https://github.com/GerritChatbot/rasa_base.git'
+        dest: /root/rasa_base
+        version: main
+        force: yes
+    - name: copy credentials
+      ansible.builtin.shell: cp credentials.yml rasa_base/credentials.yml
+      args:
+        chdir: /root
+    - name: install python deps
+      ansible.builtin.shell: python3 -m pip install rasa rasa-sdk openpyxl pandas --no-cache-dir
+      args:
+        chdir: /root/rasa_base
+    - name: train model
+      ansible.builtin.shell: rasa train --domain domain
+      args:
+          chdir: /root/rasa_base
+    - name: start action server
+      ansible.builtin.shell: nohup rasa run actions &
+      args:
+          chdir: /root/rasa_base
+    - name: start rasa server
+      ansible.builtin.shell: nohup rasa run --enable-api &
+      args:
+        chdir: /root/rasa_base
