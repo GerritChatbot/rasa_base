@@ -71,7 +71,7 @@ class ShowOfficeHoursTime(Action):
         d1 = pd.to_datetime(today)
 
         index_of_nearest_row_in_future = df.index.get_indexer([d1], method='bfill')
-        nearest_row_in_future = df.iloc[index_of_nearest_row_in_future]
+        nearest_row_in_future = df.iloc[index_of_nearest_row_in_future].reset_index()
 
         dispatcher.utter_message(
             text=f"The office address is Jednota Dormitory, Opletalova 1663/38 and the nearest office hours are on "
