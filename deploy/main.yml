@@ -43,10 +43,10 @@
       args:
           chdir: /root/rasa_base
     - name: start action server
-      ansible.builtin.shell: nohup rasa run actions &
+      ansible.builtin.shell: nohup rasa run actions >> /var/log/rasa_actions.log 2>&1 &
       args:
           chdir: /root/rasa_base
     - name: start rasa server
-      ansible.builtin.shell: nohup rasa run --enable-api &
+      ansible.builtin.shell: nohup rasa run --enable-api >> /var/log/rasa_server.log 2>&1 &
       args:
         chdir: /root/rasa_base
