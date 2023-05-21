@@ -133,28 +133,28 @@ nlu:
     - What can I do to get a Ryanair discount?
     - Where do I find validation on Ryanair website for my ESNcard?
     - Validation doesn’t work and I need discount at Ryanair, please help me!
-- intent: subscribe
-  examples: |
-    - I want to get the newsletter
-    - Can you send me the newsletter?
-    - Can you sign me up for the newsletter?
-    - I want to subscribe to a newsletter.
-    - i want to subscribe for the newsletter
-- intent: inform_email
-  examples: |
-    - My email is [amazing_person12@gmail.com](email)
-    - [pierrebaguette@hotmail.fr](email)
-    - Please send it to [anything@example.com](email)
-    - Email is [something@example.com](email)
-    - [richard.mazur9@gmail.com](email)
-- intent: inform_frequency
-  examples: |
-    - every week
-    - once a week
-    - twice per month
-    - as ofter as possible
-    - once a month
-    - weekly
+#- intent: subscribe
+#  examples: |
+#    - I want to get the newsletter
+#    - Can you send me the newsletter?
+#    - Can you sign me up for the newsletter?
+#    - I want to subscribe to a newsletter.
+#    - i want to subscribe for the newsletter
+#- intent: inform_email
+#  examples: |
+#    - My email is [amazing_person12@gmail.com](email)
+#    - [pierrebaguette@hotmail.fr](email)
+#    - Please send it to [anything@example.com](email)
+#    - Email is [something@example.com](email)
+#    - [richard.mazur9@gmail.com](email)
+#- intent: inform_frequency
+#  examples: |
+#    - every week
+#    - once a week
+#    - twice per month
+#    - as ofter as possible
+#    - once a month
+#    - weekly
 - intent: buy_esn_card
   examples: |
     - i want to buy esncard
@@ -165,12 +165,12 @@ nlu:
     - esn card
     - I would like to have the esn card
     - where can i pick up my esncard
-- intent: what_is_my_subscription_email
-  examples: |
-    - what is my subscription mail
-    - do you have an email associated with my subscription?
-    - what email are you using for newsletter?
-    - where are you sending newsletter?
+#- intent: what_is_my_subscription_email
+#  examples: |
+#    - what is my subscription mail
+#    - do you have an email associated with my subscription?
+#    - what email are you using for newsletter?
+#    - where are you sending newsletter?
   #TODO add intent - what_is_my_subscription_frequency
 - intent: pay_by_cash
   examples: |

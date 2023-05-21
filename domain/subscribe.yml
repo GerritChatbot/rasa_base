@@ -1,37 +1,37 @@
-version: '3.1'
-entities:
-- email
-intents:
-- inform_email
-- inform_frequency
-- subscribe
-- what_is_my_subscription_email
-actions:
-- utter_subscribed
-- action_what_is_my_subscription_email
-responses:
-  utter_subscribe:
-    - text: Please answer the following question in order to subscribe
-  utter_ask_email:
-    - text: What is your email address?
-  utter_ask_frequency:
-    - text: How often do you want to receive emails from me?
-  utter_subscribed:
-    - text: You're all set! Check your inbox at {email} to confirm your subscription. You will receive emails {frequency}.
-slots:
-  email:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_entity
-      entity: email
-      conditions:
-      - active_loop: newsletter_form
-  frequency:
-    type: text
-    influence_conversation: true
-    mappings:
-    - type: from_text
-      intent: inform_frequency
-      conditions:
-      - active_loop: newsletter_form
+#version: '3.1'
+#entities:
+#- email
+#intents:
+#- inform_email
+#- inform_frequency
+#- subscribe
+#- what_is_my_subscription_email
+#actions:
+#- utter_subscribed
+#- action_what_is_my_subscription_email
+#responses:
+#  utter_subscribe:
+#    - text: Please answer the following question in order to subscribe
+#  utter_ask_email:
+#    - text: What is your email address?
+#  utter_ask_frequency:
+#    - text: How often do you want to receive emails from me?
+#  utter_subscribed:
+#    - text: You're all set! Check your inbox at {email} to confirm your subscription. You will receive emails {frequency}.
+#slots:
+#  email:
+#    type: text
+#    influence_conversation: true
+#    mappings:
+#    - type: from_entity
+#      entity: email
+#      conditions:
+#      - active_loop: newsletter_form
+#  frequency:
+#    type: text
+#    influence_conversation: true
+#    mappings:
+#    - type: from_text
+#      intent: inform_frequency
+#      conditions:
+#      - active_loop: newsletter_form

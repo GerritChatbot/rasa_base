@@ -37,21 +37,21 @@ actions_dir = os.path.dirname(full_path)
 project_root_dir = os.path.dirname(actions_dir)
 
 
-class ActionSaySubscriptionEmail(Action):
-
-    def name(self) -> Text:
-        return "action_what_is_my_subscription_email"
-
-    def run(self, dispatcher: CollectingDispatcher,
-            tracker: Tracker,
-            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-
-        email = tracker.get_slot("email")
-        if not email:
-            dispatcher.utter_message(text="I don't know your email.")
-        else:
-            dispatcher.utter_message(text=f"Your email is {email}!")
-        return []
+# class ActionSaySubscriptionEmail(Action):
+#
+#     def name(self) -> Text:
+#         return "action_what_is_my_subscription_email"
+#
+#     def run(self, dispatcher: CollectingDispatcher,
+#             tracker: Tracker,
+#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+#
+#         email = tracker.get_slot("email")
+#         if not email:
+#             dispatcher.utter_message(text="I don't know your email.")
+#         else:
+#             dispatcher.utter_message(text=f"Your email is {email}!")
+#         return []
 
 
 class ShowOfficeHoursTime(Action):

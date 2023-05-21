@@ -57,21 +57,21 @@ rules:
   - intent: ryanair_discount
   - action: utter_ryanair_discount
 
-- rule: Activate newsletter form
-  steps:
-  - intent: subscribe
-  - action: newsletter_form
-  - active_loop: newsletter_form
+#- rule: Activate newsletter form
+#  steps:
+#  - intent: subscribe
+#  - action: newsletter_form
+#  - active_loop: newsletter_form
 
-- rule: Submit newsletter form
-  condition:
-  - active_loop: newsletter_form
-  steps:
-  - action: newsletter_form
-  - active_loop: null
-  - slot_was_set:
-    - requested_slot: null
-  - action: utter_subscribed
+#- rule: Submit newsletter form
+#  condition:
+#  - active_loop: newsletter_form
+#  steps:
+#  - action: newsletter_form
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  - action: utter_subscribed
 
 - rule: pay by cash
   steps:
@@ -83,10 +83,10 @@ rules:
   - intent: buy_esn_card
   - action: utter_buy_esn_card
 
-- rule: giving email subscription
-  steps:
-  - intent: what_is_my_subscription_email
-  - action: action_what_is_my_subscription_email
+#- rule: giving email subscription
+#  steps:
+#  - intent: what_is_my_subscription_email
+#  - action: action_what_is_my_subscription_email
 
 - rule: get event
   steps:

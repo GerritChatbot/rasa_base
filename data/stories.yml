@@ -19,25 +19,25 @@ stories:
   - action: utter_start
 
 
-- story: interactive_story_1
-  steps:
-  - intent: start
-  - action: utter_start
-  - intent: subscribe
-  - action: newsletter_form
-  - active_loop: newsletter_form
-  - slot_was_set:
-    - requested_slot: email
-  - slot_was_set:
-    - email: richard.mazur9@gmail.com
-  - slot_was_set:
-    - requested_slot: frequency
-  - slot_was_set:
-    - frequency: weekly
-  - slot_was_set:
-    - requested_slot: null
-  - active_loop: null
-  - action: utter_subscribed
+#- story: interactive_story_1
+#  steps:
+#  - intent: start
+#  - action: utter_start
+#  - intent: subscribe
+#  - action: newsletter_form
+#  - active_loop: newsletter_form
+#  - slot_was_set:
+#    - requested_slot: email
+#  - slot_was_set:
+#    - email: richard.mazur9@gmail.com
+#  - slot_was_set:
+#    - requested_slot: frequency
+#  - slot_was_set:
+#    - frequency: weekly
+#  - slot_was_set:
+#    - requested_slot: null
+#  - active_loop: null
+#  - action: utter_subscribed
 
 - story: esncard happy path
   steps:
