@@ -15,11 +15,11 @@ responses:
   utter_functionality:
   - text: |
       Right now I know how to do the following, just ask away:
-      - find office hours
-      - give flat/dorm recommendation
-      - where are university canteens
-      - help you when you need a doctor
-      - and some other things as well!
+      👉 find office hours
+      👉 give flat/dorm recommendation
+      👉 where are university canteens
+      👉 help you when you need a doctor
+      👉 and some other things as well!
   utter_youre_welcome:
   - text: You're welcome!
   utter_please_rephrase:
@@ -33,8 +33,8 @@ responses:
       - title: "Can I pay cash?"
         payload: "/intent_pay_by_cash"
   utter_pay_by_cash:
-  - text: If you prefer to pay by cash you can pick up the ESNcard in person during our Office hours
+  - text: If you prefer to pay by cash you can pick up the ESNcard in person during our office hours
     button_type: vertical
     buttons:
-      - title: "Show Office hours"
+      - title: "Show office hours"
         payload: "/office_hours"
