@@ -6,8 +6,8 @@ responses:
     buttons:
     - title: "How can you help?"
       payload: "/capacity_of_chatbot"
-    - title: "Subscribe for newsletter"
-      payload: "/subscribe"
+    - title: "When are office hours?"
+      payload: "/intent_office_hours"
   utter_goodbye:
   - text: Bye
   utter_iamabot:
