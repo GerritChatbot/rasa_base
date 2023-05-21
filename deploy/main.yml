@@ -8,6 +8,9 @@
 
 - name: Deploy to droplet
   hosts: droplet
+  vars:
+    rasa_repo: https://github.com/GerritChatbot/rasa_base.git
+    rasa_branch: main
   tasks:
   - name: stop rasa if running
     tags: stop
@@ -26,9 +29,9 @@
     block:
     - name: Git checkout
       ansible.builtin.git:
-        repo: 'https://github.com/GerritChatbot/rasa_base.git'
+        repo: "{{ rasa_repo }}"
         dest: /root/rasa_base
-        version: main
+        version: "{{ rasa_branch }}"
         force: yes
     - name: copy credentials
       ansible.builtin.shell: cp credentials.yml rasa_base/credentials.yml
@@ -43,10 +46,10 @@
       args:
           chdir: /root/rasa_base
     - name: start action server
-      ansible.builtin.shell: nohup rasa run actions &
+      ansible.builtin.shell: nohup rasa run actions >> /var/log/rasa_actions.log 2>&1 &
       args:
           chdir: /root/rasa_base
     - name: start rasa server
-      ansible.builtin.shell: nohup rasa run --enable-api &
+      ansible.builtin.shell: nohup rasa run --enable-api >> /var/log/rasa_server.log 2>&1 &
       args:
         chdir: /root/rasa_base
