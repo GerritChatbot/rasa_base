@@ -92,3 +92,8 @@ rules:
   steps:
   - intent: get_event
   - action: action_get_event
+
+- rule: Provide information about buddies
+  steps:
+  - intent: get_buddy
+  - action: utter_get_buddy
