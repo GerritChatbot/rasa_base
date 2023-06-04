@@ -1,0 +1,19 @@
+# Variables needed to deploy
+
+# repo information
+rasa_repo: "{{ lookup('ansible.builtin.env', 'RASA_REPO', default='https://github.com/GerritChatbot/rasa_base.git') }}"
+rasa_branch: main
+checkout_path: /root/rasa_base
+
+# droplet information
+droplet_ip: "{{ lookup('ansible.builtin.env', 'DROPLET_IP', default='159.89.27.176') }}"
+
+# other vars
+telegram_token: "{{ lookup('ansible.builtin.env', 'TELEGRAM_TOKEN', default='changeme') }}"
+
+# database information
+db_url: "{{ lookup('ansible.builtin.env', 'DB_URL', default='db-postgresql-fra1-25724-do-user-13964305-0.b.db.ondigitalocean.com') }}"
+db_port: "{{ lookup('ansible.builtin.env', 'DB_PORT', default='25060') }}"
+db_name: "{{ lookup('ansible.builtin.env', 'DB_NAME', default='defaultdb') }}"
+db_username: "{{ lookup('ansible.builtin.env', 'DB_USERNAME', default='doadmin') }}"
+db_password: "{{ lookup('ansible.builtin.env', 'DB_PASSWORD', default='changeme') }}"
