@@ -92,3 +92,8 @@ rules:
   steps:
   - intent: get_event
   - action: action_get_event
+
+- rule: provide info about renting cars
+  steps:
+  - intent: car_rental
+  - action: utter_car_rental
