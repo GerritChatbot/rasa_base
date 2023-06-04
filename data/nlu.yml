@@ -196,6 +196,12 @@ nlu:
     - buddy
     - i would like to be assigned a buddy
     - what is a buddy and where can i get one
-    - find a buddy
-    
-
+    - find a buddy    
+- intent: car_rental
+  examples: |
+    - i want to rent a car
+    - i need a car
+    - where can i get a car
+    - what do i need if i want to rent a car
+    - can you recommend a car rental company
+    - do you have any info on how to rent cars in prague

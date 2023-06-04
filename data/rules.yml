@@ -98,3 +98,7 @@ rules:
   - intent: get_buddy
   - action: utter_get_buddy
 
+- rule: provide info about renting cars
+  steps:
+  - intent: car_rental
+  - action: utter_car_rental
