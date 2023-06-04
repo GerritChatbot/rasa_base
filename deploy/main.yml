@@ -41,6 +41,10 @@
       ansible.builtin.shell: python3 -m pip install rasa rasa-sdk openpyxl pandas --no-cache-dir
       args:
         chdir: /root/rasa_base
+    - name: Template a file to endpoints.yml.j2
+      ansible.builtin.template:
+        src: /root/rasa_base/deploy/templates/endpoints.yml.j2
+        dest: /root/rasa_base/endpoints.yml
     - name: train model
       ansible.builtin.shell: rasa train --domain domain
       args:
