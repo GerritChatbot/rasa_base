@@ -4,8 +4,8 @@
 # https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
 
 #models:
-#  url: http://my-server.com/models/default_core@latest
-#  wait_time_between_pulls:  10   # [optional](default: 100)
+#    url: http://my-server.com/models/default_core@latest
+#    wait_time_between_pulls:  10   # [optional](default: 100)
 
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
@@ -35,13 +35,13 @@ action_endpoint:
 #https://ladvien.com/data-analytics-mysql-localhost-setup/
 #https://www.youtube.com/watch?v=vEN45DbPQlc&ab_channel=JiteshGaikwad
 tracker_store:
-    type: SQL
-    dialect: "postgresql"
-    url:   # (optional) host of the sql db, e.g. "localhost"
-    port:
-    db:   # path to your db
-    username:  # username used for authentication
-    password:  # password used for authentication
+  type: SQL
+  dialect: "postgresql"
+  url:   # (optional) host of the sql db, e.g. "localhost"
+  port:
+  db:   # path to your db
+  username:  # username used for authentication
+  password:  # password used for authentication
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers

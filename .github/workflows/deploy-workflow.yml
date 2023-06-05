@@ -19,7 +19,7 @@ jobs:
           key: ${{secrets.SSH_PRIVATE_KEY}}
           # Optional, additional flags to pass to ansible-playbook
           options: |
-            --inventory deploy/hosts.yml 
+            --inventory deploy/hosts.yml
             --extra-vars db_password=${{ secrets.DB_PASSWORD }}
             --extra-vars telegram_token=${{ secrets.TELEGRAM_TOKEN }}
             --verbose

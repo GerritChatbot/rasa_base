@@ -1,6 +1,9 @@
 version: '3.1'
 intents:
-- esn
+  - esn
 responses:
   utter_esn:
-    - text: Erasmus Student Network (ESN) is a volunteer organisation which supports international students during their Erasmus exchange in Prague through events, guidance, and friendship.
+    - text: | 
+        Erasmus Student Network (ESN) is a volunteer organisation which supports 
+        international students during their Erasmus exchange in Prague 
+        through events, guidance, and friendship.

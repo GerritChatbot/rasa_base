@@ -1,22 +1,21 @@
 version: "3.1"
 
 stories:
+  - story: happy path
+    steps:
+      - intent: start
+      - action: utter_start
+      - intent: capacity_of_chatbot
+      - action: utter_functionality
+      - intent: office_hours
+      - action: action_show_office_hours
+      - intent: goodbye
+      - action: utter_goodbye
 
-- story: happy path
-  steps:
-  - intent: start
-  - action: utter_start
-  - intent: capacity_of_chatbot
-  - action: utter_functionality
-  - intent: office_hours
-  - action: action_show_office_hours
-  - intent: goodbye
-  - action: utter_goodbye
-
-- story: interactive_story_1
-  steps:
-  - intent: start
-  - action: utter_start
+  - story: interactive_story_1
+    steps:
+      - intent: start
+      - action: utter_start
 
 
 #- story: interactive_story_1
@@ -39,11 +38,11 @@ stories:
 #  - active_loop: null
 #  - action: utter_subscribed
 
-- story: esncard happy path
-  steps:
-  - intent: start
-  - action: utter_start
-  - intent: buy_esn_card
-  - action: utter_buy_esn_card
-  - intent: pay_by_cash
-  - action: utter_pay_by_cash
+  - story: esncard happy path
+    steps:
+      - intent: start
+      - action: utter_start
+      - intent: buy_esn_card
+      - action: utter_buy_esn_card
+      - intent: pay_by_cash
+      - action: utter_pay_by_cash

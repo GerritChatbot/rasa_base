@@ -1,14 +1,14 @@
 version: '3.1'
 entities:
-- event
+  - event
 intents:
-- get_event
+  - get_event
 actions:
-- action_get_event
+  - action_get_event
 slots:
   event:
     type: text
     influence_conversation: true
     mappings:
-    - type: from_entity
-      entity: event
+      - type: from_entity
+        entity: event
