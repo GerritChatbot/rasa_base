@@ -37,11 +37,11 @@ action_endpoint:
 tracker_store:
     type: SQL
     dialect: "postgresql"
-    url: "{{ DB_URL }}"  # (optional) host of the sql db, e.g. "localhost"
-    port: "{{ DB_PORT }}"
-    db: "{{ DB_NAME }}"  # path to your db
-    username: "{{ DB_USERNAME }}" # username used for authentication
-    password: "{{ DB_PASSWORD }}" # password used for authentication
+    url: "{{ db_url }}"  # (optional) host of the sql db, e.g. "localhost"
+    port: "{{ db_port }}"
+    db: "{{ db_name }}"  # path to your db
+    username: "{{ db_username }}" # username used for authentication
+    password: "{{ db_password }}" # password used for authentication
 
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers

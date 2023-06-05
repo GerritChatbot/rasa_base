@@ -5,12 +5,11 @@ on:
     branches:
       - main
 jobs:
-  check-bats-version:
+  Deploy-latest-changes:
     runs-on: ubuntu-latest
     environment: deploy
     steps:
       - uses: actions/checkout@v3
-      - run: pwd
       - name: Run playbook
         uses: dawidd6/action-ansible-playbook@v2
         with:
@@ -21,5 +20,6 @@ jobs:
           # Optional, additional flags to pass to ansible-playbook
           options: |
             --inventory deploy/hosts.yml 
-            --extra-vars droplet_ip=${{ vars.DROPLET_IP }}
+            --extra-vars db_password=${{ secrets.DB_PASSWORD }}
+            --extra-vars telegram_token=${{ secrets.TELEGRAM_TOKEN }}
             --verbose
