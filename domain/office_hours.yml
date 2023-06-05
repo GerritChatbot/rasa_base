@@ -1,5 +1,5 @@
 version: '3.1'
 intents:
-- office_hours
+  - office_hours
 actions:
-- action_show_office_hours
+  - action_show_office_hours

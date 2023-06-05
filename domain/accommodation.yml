@@ -3,4 +3,4 @@ intents:
   - accommodation
 responses:
   utter_accommodation:
-  - text: Charles University offers housing for students. You can find more information about it here https://cuni.cz/UKEN-365.html#2. Another possibility is to try to find an apartment by searching through facebook groups or other websites such as https://www.flatio.com/#_ga or https://www.forstudents.cz/
+    - text: Charles University offers housing for students. You can find more information about it here https://cuni.cz/UKEN-365.html#2. Another possibility is to try to find an apartment by searching through facebook groups or other websites such as https://www.flatio.com/#_ga or https://www.forstudents.cz/

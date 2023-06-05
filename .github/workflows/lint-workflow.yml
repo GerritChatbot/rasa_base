@@ -1,0 +1,10 @@
+name: Linter
+run-name: Linting
+on: push
+jobs:
+  run-yaml-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: sudo apt install yamllint
+      - run: yamllint .

@@ -1,11 +1,11 @@
 version: '3.1'
 intents:
-- bot_challenge
-- capacity_of_chatbot
-- goodbye
-- gratitude
-- start
-- out_of_scope
-- thankyou
-- buy_esn_card
-- pay_by_cash
+  - bot_challenge
+  - capacity_of_chatbot
+  - goodbye
+  - gratitude
+  - start
+  - out_of_scope
+  - thankyou
+  - buy_esn_card
+  - pay_by_cash
