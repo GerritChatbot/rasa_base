@@ -11,6 +11,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run playbook
+        env:
+          DROPLET_IP: ${{ vars.DROPLET_IP }}
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+          DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
         uses: dawidd6/action-ansible-playbook@v2
         with:
           # Required, playbook filepath
@@ -20,6 +24,5 @@ jobs:
           # Optional, additional flags to pass to ansible-playbook
           options: |
             --inventory deploy/hosts.yml
-            --extra-vars db_password=${{ secrets.DB_PASSWORD }}
-            --extra-vars telegram_token=${{ secrets.TELEGRAM_TOKEN }}
+            --extra-vars @deploy/defaults/main.yml 
             --verbose
