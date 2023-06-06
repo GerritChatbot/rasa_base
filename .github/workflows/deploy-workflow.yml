@@ -15,6 +15,7 @@ jobs:
           DROPLET_IP: ${{ vars.DROPLET_IP }}
           TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
           DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
+          DB_URL: ${{ vars.DB_URL }}
         uses: dawidd6/action-ansible-playbook@v2
         with:
           # Required, playbook filepath
