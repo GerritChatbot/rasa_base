@@ -1,10 +1,8 @@
+---
 version: '3.1'
-entities:
-  - event
-intents:
-  - get_event
-actions:
-  - action_get_event
+entities: [event]
+intents: [get_event]
+actions: [action_get_event]
 slots:
   event:
     type: text

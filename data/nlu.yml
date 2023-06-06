@@ -1,138 +1,139 @@
-version: "3.1"
+---
+version: '3.1'
 nlu:
-- synonym: Pub Quiz
-  examples: |
-    - pubquiz
-    - pub quiz
-    - pub kviz
-    - pubkviz
-    - pubquis
-    - pub quis
-- intent: start
-  examples: |
-    - hey
-    - hello
-    - hi
-    - hello there
-    - good morning
-    - good evening
-    - moin
-    - hey there
-    - let's go
-    - hey dude
-    - goodmorning
-    - goodevening
-    - good afternoon
-    - sup
-    - whatsup
-    - how you doin'
-- intent: goodbye
-  examples: |
-    - cu
-    - good by
-    - cee you later
-    - good night
-    - bye
-    - goodbye
-    - have a nice day
-    - see you around
-    - bye bye
-    - see you later
-- intent: bot_challenge
-  examples: |
-    - are you a bot?
-    - are you a human?
-    - am I talking to a bot?
-    - am I talking to a human?
-- intent: capacity_of_chatbot
-  examples: |
-    - how can you help me?
-    - what can you do?
-    - what can you do to help me?
-    - what are the things you can do?
-    - what are the things you can help me with?
-    - what do you do?
-- intent: office_hours
-  examples: |
-    - when are office hours?
-    - what day is office open?
-    - which day will be the office open?
-    - when can I go to office?
-    - is office open today
-    - give me office hours
-    - where is the office
-    - how to get to your office
-- intent: gratitude
-  examples: |
-    - thank you
-    - that is very useful
-    - thanks
-    - thank you for letting me know
-    - thanks for the info
-- intent: health_issues
-  examples: |
-    - what should I do when I need doctor?
-    - i’m sick, where can I find help?
-    - i have a problem, where is a doctor?
-    - i need a doctor, where can I find someone?
-    - how does healthcare for foreign students work?
-    - what should I do when I feel sick?
-    - i don’t feel well, where is a doctor?
-    - i don’t feel well, what should I do?
-    - where should I look for help, if I don’t feel well?
-    - i’m sick.
-    - where should I look for medical help?
-    - what should do when I need a doctor?
-    - i need a doctor. Could you help me?
-    - i am feeling sick. Could you help me?
-    - where is the nearest doctor fore erasmus/foreign students?
-    - where to find the nearest doctor/hospital?
-    - how do I get to the nearest doctor?
-    - could you give me info about the healthcare/doctor for erasmus/foreign students?
-    - i need information about opening hours of the hospitals/doctors near me.
-    - i am having some health complications, where can I find help?
-    - i need an ambulance.
-- intent: canteen
-  examples: |
-    - is there a cheap place to eat near the university?
-    - where can i get inexpensive food?
-    - any recommendations for a lunch place?
-    - are there any restaurants for students?
-    - is there a canteen at the university?
-    - does the university have any cheap lunch places?
-    - where can i eat
-    - where can i get lunch at the university?
-    - i'm hungry.
-- intent: esn
-  examples: |
-    - what is erasmus student network?
-    - what does esn do?
-    - what does esn mean?
-    - what does esn stand for?
-    - is esn an abbreviation?
-    - how can the student network help me?
-    - what do you guys do?
-    - tell me about esn.
-    - i have only now heard of esn what is it
-    - please can you elaborate on esn
-- intent: accommodation
-  examples: |
-    - how can i find accommodation in prague?
-    - where am i going to live during my stay?
-    - how do i find an apartment?
-    - is it possible to live in a dormitory during my erasmus?
-    - i need cheap accommodation.
-    - where can i apply for a dorm room?
-    - does the university offer housing?
-- intent: ryanair_discount
-  examples: |
-    - My Ryanair validation on their website doesn’t work, what should I do?
-    - I want Ryanair discount, what should I do?
-    - I cannot access my Ryanair validation on company’s website, what should I do?
-    - Can I have discount at Ryanair with ESNcard?
-    - What can I do to get a Ryanair discount?
-    - Where do I find validation on Ryanair website for my ESNcard?
-    - Validation doesn’t work and I need discount at Ryanair, please help me!
+  - synonym: Pub Quiz
+    examples: |
+      - pubquiz
+      - pub quiz
+      - pub kviz
+      - pubkviz
+      - pubquis
+      - pub quis
+  - intent: start
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - sup
+      - whatsup
+      - how you doin'
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+  - intent: capacity_of_chatbot
+    examples: |
+      - how can you help me?
+      - what can you do?
+      - what can you do to help me?
+      - what are the things you can do?
+      - what are the things you can help me with?
+      - what do you do?
+  - intent: office_hours
+    examples: |
+      - when are office hours?
+      - what day is office open?
+      - which day will be the office open?
+      - when can I go to office?
+      - is office open today
+      - give me office hours
+      - where is the office
+      - how to get to your office
+  - intent: gratitude
+    examples: |
+      - thank you
+      - that is very useful
+      - thanks
+      - thank you for letting me know
+      - thanks for the info
+  - intent: health_issues
+    examples: |
+      - what should I do when I need doctor?
+      - i’m sick, where can I find help?
+      - i have a problem, where is a doctor?
+      - i need a doctor, where can I find someone?
+      - how does healthcare for foreign students work?
+      - what should I do when I feel sick?
+      - i don’t feel well, where is a doctor?
+      - i don’t feel well, what should I do?
+      - where should I look for help, if I don’t feel well?
+      - i’m sick.
+      - where should I look for medical help?
+      - what should do when I need a doctor?
+      - i need a doctor. Could you help me?
+      - i am feeling sick. Could you help me?
+      - where is the nearest doctor fore erasmus/foreign students?
+      - where to find the nearest doctor/hospital?
+      - how do I get to the nearest doctor?
+      - could you give me info about the healthcare/doctor for erasmus/foreign students?
+      - i need information about opening hours of the hospitals/doctors near me.
+      - i am having some health complications, where can I find help?
+      - i need an ambulance.
+  - intent: canteen
+    examples: |
+      - is there a cheap place to eat near the university?
+      - where can i get inexpensive food?
+      - any recommendations for a lunch place?
+      - are there any restaurants for students?
+      - is there a canteen at the university?
+      - does the university have any cheap lunch places?
+      - where can i eat
+      - where can i get lunch at the university?
+      - i'm hungry.
+  - intent: esn
+    examples: |
+      - what is erasmus student network?
+      - what does esn do?
+      - what does esn mean?
+      - what does esn stand for?
+      - is esn an abbreviation?
+      - how can the student network help me?
+      - what do you guys do?
+      - tell me about esn.
+      - i have only now heard of esn what is it
+      - please can you elaborate on esn
+  - intent: accommodation
+    examples: |
+      - how can i find accommodation in prague?
+      - where am i going to live during my stay?
+      - how do i find an apartment?
+      - is it possible to live in a dormitory during my erasmus?
+      - i need cheap accommodation.
+      - where can i apply for a dorm room?
+      - does the university offer housing?
+  - intent: ryanair_discount
+    examples: |
+      - My Ryanair validation on their website doesn’t work, what should I do?
+      - I want Ryanair discount, what should I do?
+      - I cannot access my Ryanair validation on company’s website, what should I do?
+      - Can I have discount at Ryanair with ESNcard?
+      - What can I do to get a Ryanair discount?
+      - Where do I find validation on Ryanair website for my ESNcard?
+      - Validation doesn’t work and I need discount at Ryanair, please help me!
 #- intent: subscribe
 #  examples: |
 #    - I want to get the newsletter
@@ -155,53 +156,53 @@ nlu:
 #    - as ofter as possible
 #    - once a month
 #    - weekly
-- intent: buy_esn_card
-  examples: |
-    - i want to buy esncard
-    - can I get esn card please?
-    - how can I get card from esn
-    - where can I get the esn discount card
-    - i would like to purchase the special esn discount
-    - esn card
-    - I would like to have the esn card
-    - where can i pick up my esncard
+  - intent: buy_esn_card
+    examples: |
+      - i want to buy esncard
+      - can I get esn card please?
+      - how can I get card from esn
+      - where can I get the esn discount card
+      - i would like to purchase the special esn discount
+      - esn card
+      - I would like to have the esn card
+      - where can i pick up my esncard
 #- intent: what_is_my_subscription_email
 #  examples: |
 #    - what is my subscription mail
 #    - do you have an email associated with my subscription?
 #    - what email are you using for newsletter?
 #    - where are you sending newsletter?
-  #TODO add intent - what_is_my_subscription_frequency
-- intent: pay_by_cash
-  examples: |
-    - can i pay by cash
-    - what if i want to pay by cash
-    - is it possible not to pay online
-    - i prefer to pay with real money
-    - i can only pay cash
-- intent: get_event
-  examples: |
-    - i want to go to [pubquiz](event)
-    - can i go to [pub quiz](event)
-    - can you tell me about the upcoming [Pub Quiz](event)
-    - [pub quiz](event) please
-    - give me more information about the [pub quiz](event)
-- intent: get_buddy
-  examples: |
-    - i need a buddy
-    - where can i find a buddy
-    - i would like to get a buddy for my erasmus
-    - can you help me find a buddy
-    - i need a local buddy
-    - buddy
-    - i would like to be assigned a buddy
-    - what is a buddy and where can i get one
-    - find a buddy    
-- intent: car_rental
-  examples: |
-    - i want to rent a car
-    - i need a car
-    - where can i get a car
-    - what do i need if i want to rent a car
-    - can you recommend a car rental company
-    - do you have any info on how to rent cars in prague
+  # TODO add intent - what_is_my_subscription_frequency
+  - intent: pay_by_cash
+    examples: |
+      - can i pay by cash
+      - what if i want to pay by cash
+      - is it possible not to pay online
+      - i prefer to pay with real money
+      - i can only pay cash
+  - intent: get_event
+    examples: |
+      - i want to go to [pubquiz](event)
+      - can i go to [pub quiz](event)
+      - can you tell me about the upcoming [Pub Quiz](event)
+      - [pub quiz](event) please
+      - give me more information about the [pub quiz](event)
+  - intent: get_buddy
+    examples: |
+      - i need a buddy
+      - where can i find a buddy
+      - i would like to get a buddy for my erasmus
+      - can you help me find a buddy
+      - i need a local buddy
+      - buddy
+      - i would like to be assigned a buddy
+      - what is a buddy and where can i get one
+      - find a buddy
+  - intent: car_rental
+    examples: |-
+      - i want to rent a car
+      - i need a car
+      - where can i get a car
+      - what do i need if i want to rent a car
+      - can you recommend a car rental company
+      - do you have any info on how to rent cars in prague

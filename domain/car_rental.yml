@@ -1,9 +1,9 @@
+---
 version: '3.1'
-intents:
-  - car_rental
+intents: [car_rental]
 responses:
   utter_car_rental:
-    - text: | 
-        If you want to rent a car, check out [this site](www.rentalcars.com). 
+    - text: |-
+        If you want to rent a car, check out [this site](www.rentalcars.com).
         If you need a car only for a short time, consider carsharing companies such as 
         [Car4way](www.car4way.cz) or [Autonapůl](www.autonapul.cz).

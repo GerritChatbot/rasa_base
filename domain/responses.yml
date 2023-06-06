@@ -1,13 +1,15 @@
+---
 version: '3.1'
 responses:
   utter_start:
-    - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you need.
+    - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you
+        need.
       button_type: vertical
       buttons:
-        - title: "How can you help?"
-          payload: "/capacity_of_chatbot"
-        - title: "When are office hours?"
-          payload: "/intent_office_hours"
+        - title: How can you help?
+          payload: /capacity_of_chatbot
+        - title: When are office hours?
+          payload: /intent_office_hours
   utter_goodbye:
     - text: Bye
   utter_iamabot:
@@ -25,16 +27,18 @@ responses:
   utter_please_rephrase:
     - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_buy_esn_card:
-    - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999 and pick it up during the office hours
+    - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999
+        and pick it up during the office hours
       button_type: vertical
       buttons:
-        - title: "When are the office hours?"
-          payload: "/intent_office_hours"
-        - title: "Can I pay cash?"
-          payload: "/intent_pay_by_cash"
+        - title: When are the office hours?
+          payload: /intent_office_hours
+        - title: Can I pay cash?
+          payload: /intent_pay_by_cash
   utter_pay_by_cash:
-    - text: If you prefer to pay by cash you can pick up the ESNcard in person during our office hours
+    - text: If you prefer to pay by cash you can pick up the ESNcard in person during
+        our office hours
       button_type: vertical
       buttons:
-        - title: "Show office hours"
-          payload: "/office_hours"
+        - title: Show office hours
+          payload: /office_hours

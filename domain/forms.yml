@@ -1,5 +1,5 @@
-#version: '3.1'
-#forms:
+# version: '3.1'
+# forms:
 #  newsletter_form:
 #    required_slots:
 #    - email
