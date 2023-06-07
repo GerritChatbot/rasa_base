@@ -1,9 +1,9 @@
+---
 name: Deploy rasa
 run-name: Deploying Rasa
 on:
   push:
-    branches:
-      - main
+    branches: [main]
 jobs:
   Deploy-latest-changes:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
           # Optional, SSH private key
           key: ${{secrets.SSH_PRIVATE_KEY}}
           # Optional, additional flags to pass to ansible-playbook
-          options: |
+          options: |-
             --inventory deploy/hosts.yml
             --extra-vars @deploy/defaults/main.yml 
             --verbose

@@ -1,5 +1,5 @@
-version: "3.1"
-
+---
+version: '3.1'
 stories:
   - story: happy path
     steps:
@@ -11,13 +11,10 @@ stories:
       - action: action_show_office_hours
       - intent: goodbye
       - action: utter_goodbye
-
   - story: interactive_story_1
     steps:
       - intent: start
       - action: utter_start
-
-
 #- story: interactive_story_1
 #  steps:
 #  - intent: start
@@ -37,7 +34,6 @@ stories:
 #    - requested_slot: null
 #  - active_loop: null
 #  - action: utter_subscribed
-
   - story: esncard happy path
     steps:
       - intent: start

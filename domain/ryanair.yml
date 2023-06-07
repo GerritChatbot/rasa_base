@@ -1,9 +1,9 @@
+---
 version: '3.1'
-intents:
-  - ryanair_discount
+intents: [ryanair_discount]
 responses:
   utter_ryanair_discount:
-    - text: | 
+    - text: |-
         For the Ryanair discount, you have to register your ESNcard on http://esncard.org. 
         Then you have to log in to Ryanair and go to ERASMUS column and fill in your personal details. 
         You have to make sure that your personal details are the same 

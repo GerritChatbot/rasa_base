@@ -1,23 +1,21 @@
+---
 # This file contains the different endpoints your bot can use.
 
 # Server where the models are pulled from.
 # https://rasa.com/docs/rasa/model-storage#fetching-models-from-a-server
 
-#models:
+# models:
 #    url: http://my-server.com/models/default_core@latest
-#    wait_time_between_pulls:  10   # [optional](default: 100)
-
+#    wait_time_between_pulls:  10  # [optional](default: 100)
 # Server which runs your custom actions.
 # https://rasa.com/docs/rasa/custom-actions
-
 action_endpoint:
-  url: "http://localhost:5055/webhook"
-
+  url: http://localhost:5055/webhook
 # Tracker store which is used to store the conversations.
 # By default the conversations are stored in memory.
 # https://rasa.com/docs/rasa/tracker-stores
 
-#tracker_store:
+# tracker_store:
 #    type: redis
 #    url: <host of the redis instance, e.g. localhost>
 #    port: <port of your redis instance, usually 6379>
@@ -25,28 +23,26 @@ action_endpoint:
 #    password: <password used for authentication>
 #    use_ssl: <whether or not the communication is encrypted, default false>
 
-#tracker_store:
+# tracker_store:
 #    type: mongod
 #    url: <url to your mongo instance, e.g. mongodb://localhost:27017>
 #    db: <name of the db within your mongo instance, e.g. rasa>
 #    username: <username used for authentication>
 #    password: <password used for authentication>
-
-#https://ladvien.com/data-analytics-mysql-localhost-setup/
-#https://www.youtube.com/watch?v=vEN45DbPQlc&ab_channel=JiteshGaikwad
+# https://ladvien.com/data-analytics-mysql-localhost-setup/
+# https://www.youtube.com/watch?v=vEN45DbPQlc&ab_channel=JiteshGaikwad
 tracker_store:
   type: SQL
-  dialect: "postgresql"
+  dialect: postgresql
   url:   # (optional) host of the sql db, e.g. "localhost"
   port:
-  db:   # path to your db
+  db:  # path to your db
   username:  # username used for authentication
   password:  # password used for authentication
-
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
 
-#event_broker:
+# event_broker:
 #  url: localhost
 #  username: username
 #  password: password
