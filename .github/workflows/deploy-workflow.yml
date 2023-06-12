@@ -3,11 +3,11 @@ name: Deploy rasa
 run-name: Deploying Rasa
 on:
   push:
-    branches: [main]
+    branches: [dev]
 jobs:
   Deploy-latest-changes:
     runs-on: ubuntu-latest
-    environment: deploy
+    environment: deploy_dev
     steps:
       - uses: actions/checkout@v3
       - name: Run playbook
