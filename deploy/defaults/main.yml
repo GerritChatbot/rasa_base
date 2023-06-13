@@ -11,6 +11,8 @@ droplet_ip: "{{ lookup('ansible.builtin.env', 'DROPLET_IP', default='159.89.27.1
 
 # other vars
 telegram_token: "{{ lookup('ansible.builtin.env', 'TELEGRAM_TOKEN', default='changeme') }}"
+telegram_username: "{{ lookup('ansible.builtin.env', 'TELEGRAM_USERNAME', default='telegram_username') }}"
+webhook_url: "{{ lookup('ansible.builtin.env', 'WEBHOOK_URL', default='webhook_url') }}"
 
 # database information
 db_url: "{{ lookup('ansible.builtin.env', 'DB_URL', default='db-postgresql-fra1-25724-do-user-13964305-0.b.db.ondigitalocean.com') }}"
