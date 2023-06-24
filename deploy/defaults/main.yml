@@ -7,7 +7,7 @@ rasa_branch: dev
 checkout_path: /root/rasa_base
 
 # droplet information
-droplet_ip: "{{ lookup('ansible.builtin.env', 'DROPLET_IP', default='159.89.27.176') }}"
+droplet_ip: "{{ lookup('ansible.builtin.env', 'DROPLET_IP', default='46.101.199.95') }}"
 
 # other vars
 telegram_token: "{{ lookup('ansible.builtin.env', 'TELEGRAM_TOKEN', default='changeme') }}"
