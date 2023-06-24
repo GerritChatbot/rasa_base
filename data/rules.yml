@@ -86,3 +86,7 @@ rules:
     steps:
       - intent: car_rental
       - action: utter_car_rental
+  - rule: Provide general tips for events and trips
+    steps:
+      - intent: trip_tips
+      - action: utter_trip_tips
