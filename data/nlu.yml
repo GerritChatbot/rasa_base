@@ -206,3 +206,12 @@ nlu:
       - what do i need if i want to rent a car
       - can you recommend a car rental company
       - do you have any info on how to rent cars in prague
+  - intent: trip_tips
+    examples: |-
+      - where can i travel in czech republic
+      - what are some parties in prague
+      - interesting places to visit
+      - do you have any tips on where to take a trip in the country
+      - is there anything cool happening in the city
+      - tell me about interesting events happening here
+      - where can i find a list of events in prague
