@@ -3,7 +3,7 @@
 
 # repo information
 rasa_repo: "{{ lookup('ansible.builtin.env', 'RASA_REPO', default='https://github.com/GerritChatbot/rasa_base.git') }}"
-rasa_branch: main
+rasa_branch: dev
 checkout_path: /root/rasa_base
 
 # droplet information
