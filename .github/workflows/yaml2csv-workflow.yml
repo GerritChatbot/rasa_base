@@ -18,6 +18,5 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install pathlib pyaml pandas clumper parse
-
       - name: execute py script # run main.py
         run: python scripts/utility.py
