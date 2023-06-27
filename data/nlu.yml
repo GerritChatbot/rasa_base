@@ -215,3 +215,12 @@ nlu:
       - is there anything cool happening in the city
       - tell me about interesting events happening here
       - where can i find a list of events in prague
+  - intent: sim_card
+    examples: |-
+      - where can i get sim card
+      - i want to buy a sim card
+      - how do i buy phone card
+      - can you give me info about sim cards
+      - sim card
+      - i need a card for my phone
+      - which sim card is the best

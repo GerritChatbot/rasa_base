@@ -1,0 +1,8 @@
+---
+version: '3.1'
+intents: [sim_card]
+responses:
+  utter_sim_card:
+    - text: |-
+        We offer a pre-paid Vodafone SIM card especially designed for incoming foreign students!
+        You can read more about it on our website. (https://esncuprague.cz/sim-cards)
