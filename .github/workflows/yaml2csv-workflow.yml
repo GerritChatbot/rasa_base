@@ -20,3 +20,8 @@ jobs:
           pip install pathlib pyaml pandas clumper parse
       - name: execute py script # run main.py
         run: python scripts/utility.py
+      - name: Archive code coverage results
+        uses: actions/upload-artifact@v3
+        with:
+          name: code-coverage-report
+          path: external_data_test/new
