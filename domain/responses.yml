@@ -27,8 +27,8 @@ responses:
   utter_please_rephrase:
     - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_buy_esn_card:
-    - text: You can pay for ESNcard using https://pay.trisbee.com/esncup/300/99999
-        and pick it up during the office hours
+    - text: ESNcard costs 300 czk. You can pay for it using https://pay.trisbee.com/esncup/300/99999
+        and pick it up during our office hours.
       button_type: vertical
       buttons:
         - title: When are the office hours?
