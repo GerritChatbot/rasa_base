@@ -1,0 +1,8 @@
+---
+version: '3.1'
+intents: [social_media]
+responses:
+  utter_social_media:
+    - text: |-
+        You can access all our social media pages via our Linktree page (https://linktr.ee/esncuprague).
+        Connect with fellow students and stay updated on all our activities!
