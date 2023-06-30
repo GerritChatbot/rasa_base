@@ -90,10 +90,10 @@ rules:
     steps:
       - intent: trip_tips
       - action: utter_trip_tips
-  - rule: Provide link to group chat
+  - rule: Provide links to our social media pages
     steps:
-      - intent: group_chat
-      - action: utter_group_chat
+      - intent: social_media
+      - action: utter_social_media
   - rule: Provide info on where to buy SIM card
     steps:
       - intent: sim_card
