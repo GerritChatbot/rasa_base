@@ -90,6 +90,10 @@ rules:
     steps:
       - intent: trip_tips
       - action: utter_trip_tips
+  - rule: Provide link to group chat
+    steps:
+      - intent: group_chat
+      - action: utter_group_chat
   - rule: Provide info on where to buy SIM card
     steps:
       - intent: sim_card

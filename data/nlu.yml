@@ -215,6 +215,14 @@ nlu:
       - is there anything cool happening in the city
       - tell me about interesting events happening here
       - where can i find a list of events in prague
+  - intent: group_chat
+    examples: |-
+      - i want to join esn whatsapp group
+      - is there some whatsapp group with all the students
+      - do you have some chat group
+      - is there a group chat for all the erasmus students
+      - does a telegram chat exist for esn people
+      - how can i join the whatsapp chat
   - intent: sim_card
     examples: |-
       - where can i get sim card
