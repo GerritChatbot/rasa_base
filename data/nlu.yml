@@ -223,3 +223,12 @@ nlu:
       - is there a group chat for all the erasmus students
       - does a telegram chat exist for esn people
       - how can i join the whatsapp chat
+  - intent: sim_card
+    examples: |-
+      - where can i get sim card
+      - i want to buy a sim card
+      - how do i buy phone card
+      - can you give me info about sim cards
+      - sim card
+      - i need a card for my phone
+      - which sim card is the best
