@@ -125,6 +125,13 @@ nlu:
       - i need cheap accommodation.
       - where can i apply for a dorm room?
       - does the university offer housing?
+      - i want a place to live
+      - do you know where i could find a place to rent
+      - house
+      - i need a flat
+      - i need housing
+      - can i get a place in a dorm
+      - do you have any info about dorms in prague
   - intent: ryanair_discount
     examples: |
       - My Ryanair validation on their website doesn’t work, what should I do?
