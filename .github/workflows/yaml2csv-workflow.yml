@@ -2,8 +2,7 @@
 name: Convert yaml NLU data to csv
 run-name: Converting NLU data
 on:
-  push:
-    branches: [main]
+  push
 jobs:
   Convert-NLU-data:
     runs-on: ubuntu-latest
@@ -24,4 +23,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: code-coverage-report
-          path: external_data_test/new
+          path: new
