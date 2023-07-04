@@ -245,3 +245,12 @@ nlu:
       - sim card
       - i need a card for my phone
       - which sim card is the best
+  - intent: eis
+    examples: |-
+      what is erasmus in schools
+      i want to join EiS
+      can i participate in erasmus in schools
+      can you tell me more about eis
+      how can i sign up for erasmus in schools
+      how does eis work
+      who can join erasmus in schools
