@@ -98,3 +98,7 @@ rules:
     steps:
       - intent: sim_card
       - action: utter_sim_card
+  - rule: Provide info on Erasmus in Schools
+    steps:
+      - intent: eis
+      - action: utter_eis
