@@ -1,0 +1,9 @@
+---
+version: '3.1'
+intents: [eis]
+responses:
+  utter_eis:
+    - text: |-
+        Erasmus in Schools (EiS) lets exchange students at Charles University share their experiences and culture with local schools in Prague.
+        It's a cool way to promote understanding and cultural awareness! Find out more about EiS here. (https://esncuprague.cz/erasmus-schools)
+        If you want to join, fill out this form. (https://docs.google.com/forms/d/e/1FAIpQLSeFrTXHEHL7lh0E-n3r4mRyYWx8BpieRYulxpLQi58MrhUQvA/viewform)
