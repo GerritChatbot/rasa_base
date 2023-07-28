@@ -206,7 +206,7 @@ nlu:
       - what is a buddy and where can i get one
       - find a buddy
   - intent: car_rental
-    examples: |-
+    examples: |
       - i want to rent a car
       - i need a car
       - where can i get a car
@@ -214,7 +214,7 @@ nlu:
       - can you recommend a car rental company
       - do you have any info on how to rent cars in prague
   - intent: trip_tips
-    examples: |-
+    examples: |
       - where can i travel in czech republic
       - what are some parties in prague
       - interesting places to visit
@@ -223,7 +223,7 @@ nlu:
       - tell me about interesting events happening here
       - where can i find a list of events in prague
   - intent: social_media
-    examples: |-
+    examples: |
       - i want to join esn whatsapp group
       - is there some whatsapp group with all the students
       - do you have some chat group
@@ -237,7 +237,7 @@ nlu:
       - can you send me a link to your facebook page
       - what is your instagram username
   - intent: sim_card
-    examples: |-
+    examples: |
       - where can i get sim card
       - i want to buy a sim card
       - how do i buy phone card
@@ -246,11 +246,11 @@ nlu:
       - i need a card for my phone
       - which sim card is the best
   - intent: eis
-    examples: |-
-      what is erasmus in schools
-      i want to join EiS
-      can i participate in erasmus in schools
-      can you tell me more about eis
-      how can i sign up for erasmus in schools
-      how does eis work
-      who can join erasmus in schools
+    examples: |
+      - what is erasmus in schools
+      - i want to join EiS
+      - can i participate in erasmus in schools
+      - can you tell me more about eis
+      - how can i sign up for erasmus in schools
+      - how does eis work
+      - who can join erasmus in schools
