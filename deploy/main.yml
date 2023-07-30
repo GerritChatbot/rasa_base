@@ -49,7 +49,7 @@
           args:
             chdir: '{{ checkout_path }}'
         - name: start rasa server
-          ansible.builtin.shell: nohup rasa run --credentials credentials.yml --enable-api >> /var/log/rasa_server.log
+          ansible.builtin.shell: nohup rasa run --enable-api >> /var/log/rasa_server.log --credentials credentials.yml 
             2>&1 &
           args:
             chdir: '{{ checkout_path }}'
