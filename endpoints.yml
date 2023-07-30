@@ -31,14 +31,14 @@ action_endpoint:
 #    password: <password used for authentication>
 # https://ladvien.com/data-analytics-mysql-localhost-setup/
 # https://www.youtube.com/watch?v=vEN45DbPQlc&ab_channel=JiteshGaikwad
-tracker_store:
-  type: SQL
-  dialect: postgresql
-  url:   # (optional) host of the sql db, e.g. "localhost"
-  port:
-  db:  # path to your db
-  username:  # username used for authentication
-  password:  # password used for authentication
+#tracker_store:
+#  type: SQL
+#  dialect: postgresql
+#  url:   # (optional) host of the sql db, e.g. "localhost"
+#  port:
+#  db:  # path to your db
+#  username:  # username used for authentication
+#  password:  # password used for authentication
 # Event broker which all conversation events should be streamed to.
 # https://rasa.com/docs/rasa/event-brokers
 
