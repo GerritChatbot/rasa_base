@@ -34,6 +34,10 @@
     - name: Deploy rasa
       tags: deploy
       block:
+        - name: install virtualenv
+          ansible.builtin.shell: pip install virtualenv
+          args:
+            chdir: '{{ checkout_path }}'
         - name: install python deps
           ansible.builtin.pip:
             requirements: requirements.txt
