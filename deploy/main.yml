@@ -35,8 +35,9 @@
       tags: deploy
       block:
         - name: install python deps
-          ansible.builtin.shell: python3 -m pip install rasa rasa-sdk openpyxl pandas
-            --no-cache-dir
+          ansible.builtin.pip:
+            requirements: requirements.txt
+            virtualenv: venv
           args:
             chdir: '{{ checkout_path }}'
         - name: train model
