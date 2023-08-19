@@ -5,4 +5,8 @@ responses:
   utter_get_buddy:
     - text: |-
         To get a buddy (a local student in your host country to help you with everything you need) 
-        you can register on this website https://cuni.broaddy.com/register/international
+        you can register using the link below
+      button_type: vertical_url
+      buttons:
+        - title: Sign up to get a buddy
+          url: "https://cuni.broaddy.com/register/international"

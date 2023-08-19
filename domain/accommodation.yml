@@ -3,7 +3,17 @@ version: '3.1'
 intents: [accommodation]
 responses:
   utter_accommodation:
-    - text: Charles University offers housing for students. You can find more information
-        about it here (www.cuni.cz/UKEN-365.html#2). Another possibility is to try
-        to find an apartment by searching through facebook groups or other websites
-        such as Flatio (www.flatio.com/#_ga), forStudents (www.forstudents.cz) or Bezrealitky (www.bezrealitky.com)
+    - text: Charles University offers dormitory spots for students, but these are often quickly gone. 
+      
+        An alternative is to search through facebook groups or specialised websites
+        such as Flatio, forStudents or Bezrealitky. Just be careful with deposits, we had cases of scammers in the past.
+      button_type: vertical_url
+      buttons:
+        - title: University housing
+          url: "www.cuni.cz/UKEN-365.html#1"
+        - title: Flatio
+          url: "www.flatio.com/#_ga"
+        - title: forStudents
+          url: "www.forstudents.cz"
+        - title: BezRealitky
+          url: "www.bezrealitky.com"
