@@ -42,3 +42,6 @@ responses:
       buttons:
         - title: Show office hours
           payload: /office_hours
+  utter_party:
+    - text: "Here are the upcoming parties: "
+

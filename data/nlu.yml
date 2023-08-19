@@ -254,3 +254,32 @@ nlu:
       - how can i sign up for erasmus in schools
       - how does eis work
       - who can join erasmus in schools
+  - intent: party
+    examples: |
+      - are there any parties happening soon?
+      - I want to know about the next party.
+      - when's the next party?
+      - looking for parties this month.
+      - show me the party schedule.
+      - list all parties for the upcoming week.
+      - I'm in the mood for a party, any suggestions?
+      - where's the party at this weekend?
+      - any party events coming up?
+      - I'd like to attend a party, any info?
+      - parties around me this week?
+      - what's the party scene like this month?
+      - are there any party invites for me?
+      - can you list the parties for the next few days?
+      - I'm searching for a party to go to.
+      - any cool parties happening soon?
+      - inform me about the latest party events.
+      - I'm free this Friday, any parties?
+      - what are the party options for tomorrow?
+      - I need details on the upcoming parties.
+      - planning to party this week, any leads?
+      - where can I party this weekend?
+      - give me the party calendar for this month.
+      - I'm interested in partying, any recommendations?
+      - any party announcements?
+
+
