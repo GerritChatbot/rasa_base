@@ -4,5 +4,10 @@ intents: [social_media]
 responses:
   utter_social_media:
     - text: |-
-        You can access all our social media pages via our Linktree page (https://linktr.ee/esncuprague).
+        You can access all our social media pages via our Linktree page.
         Connect with fellow students and stay updated on all our activities!
+      button_type: inline_url
+      buttons:
+        - title: Linktree
+          url: "https://linktr.ee/esncuprague"
+
