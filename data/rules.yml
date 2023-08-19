@@ -102,3 +102,7 @@ rules:
     steps:
       - intent: eis
       - action: utter_eis
+  - rule: Provide party information
+    steps:
+    - intent: party
+    - action: utter_party

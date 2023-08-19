@@ -10,3 +10,4 @@ intents:
   - thankyou
   - buy_esn_card
   - pay_by_cash
+  - party
