@@ -3,3 +3,6 @@
 /.rasa
 /_class_learning
 /models
+/scripts/temp
+/scripts/session*
+credentials.yml
