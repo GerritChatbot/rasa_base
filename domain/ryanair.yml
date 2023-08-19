@@ -11,4 +11,3 @@ responses:
       buttons:
         - title: Register ESNcard
           url: "http://esncard.org"
-
