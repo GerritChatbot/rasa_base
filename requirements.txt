@@ -2,3 +2,4 @@ rasa
 rasa-sdk
 openpyxl
 pandas
+telethon
