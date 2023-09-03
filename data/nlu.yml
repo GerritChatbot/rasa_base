@@ -45,7 +45,7 @@ nlu:
       - are you a human?
       - am I talking to a bot?
       - am I talking to a human?
-  - intent: capacity_of_chatbot
+  - intent: help
     examples: |
       - how can you help me?
       - what can you do?

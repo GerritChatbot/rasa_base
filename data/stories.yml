@@ -5,8 +5,8 @@ stories:
     steps:
       - intent: start
       - action: utter_start
-      - intent: capacity_of_chatbot
-      - action: utter_functionality
+      - intent: help
+      - action: utter_help
       - intent: office_hours
       - action: action_show_office_hours
       - intent: goodbye

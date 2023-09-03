@@ -14,7 +14,7 @@ responses:
     - text: Bye
   utter_iamabot:
     - text: I am a bot, created with love by ESN CU Prague.
-  utter_functionality:
+  utter_help:
     - text: |
         Right now I know how to do the following, just ask away:
         👉 find office hours
