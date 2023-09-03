@@ -5,5 +5,10 @@ responses:
   utter_esn:
     - text: |-
         Erasmus Student Network (ESN) is a volunteer organisation which supports 
-        international students during their Erasmus exchange in Prague 
+        international students during their Erasmus exchange 
         through events, guidance, and friendship.
+      custom:
+        latitude: 50.0804486
+        longitude: 14.4469256
+        title: "ESN office"
+        address: "Slavíkova 1499/22, 130 00 Praha 3 - Žižkov, Česko"
