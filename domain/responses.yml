@@ -7,7 +7,7 @@ responses:
       button_type: vertical
       buttons:
         - title: How can you help?
-          payload: /capacity_of_chatbot
+          payload: /help
         - title: When are office hours?
           payload: /intent_office_hours
   utter_help:
