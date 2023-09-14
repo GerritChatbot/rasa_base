@@ -8,35 +8,35 @@ rules:
       - action: utter_start
   - rule: Say goodbye anytime the user says goodbye
     steps:
-      - intent: goodbye
+      - intent: intent_goodbye
       - action: utter_goodbye
   - rule: Say 'I am a bot' anytime the user challenges
     steps:
-      - intent: bot_challenge
+      - intent: intent_bot_challenge
       - action: utter_iamabot
   - rule: Say what the office hours are when the users want to know them
     steps:
-      - intent: office_hours
-      - action: action_show_office_hours
+      - intent: intent_office_hours
+      - action: action_get_office_hours
   - rule: Say 'You are welcome' when user is happy with the info provided
     steps:
-      - intent: gratitude
+      - intent: intent_gratitude
       - action: utter_youre_welcome
   - rule: Provide information about healthcare if prompted
     steps:
-      - intent: health_issues
+      - intent: intent_health_issues
       - action: utter_health_issues
   - rule: Respond to questions about university canteens
     steps:
-      - intent: canteen
+      - intent: intent_canteen
       - action: utter_canteen
   - rule: Provide information about ESN if prompted
     steps:
-      - intent: esn
+      - intent: intent_esn
       - action: utter_esn
   - rule: Provide information about accommodation if prompted
     steps:
-      - intent: accommodation
+      - intent: intent_accommodation
       - action: utter_accommodation
   - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
     steps:
@@ -44,7 +44,7 @@ rules:
       - action: utter_please_rephrase
   - rule: Give answer about Ryanair discount
     steps:
-      - intent: ryanair_discount
+      - intent: intent_ryanair_discount
       - action: utter_ryanair_discount
 #- rule: Activate newsletter form
 #  steps:
@@ -63,11 +63,11 @@ rules:
 #  - action: utter_subscribed
   - rule: pay by cash
     steps:
-      - intent: pay_by_cash
+      - intent: intent_pay_by_cash
       - action: utter_pay_by_cash
   - rule: Provide information about ESN if prompted
     steps:
-      - intent: buy_esn_card
+      - intent: intent_buy_esn_card
       - action: utter_buy_esn_card
 
 #- rule: giving email subscription
@@ -76,29 +76,29 @@ rules:
 #  - action: action_what_is_my_subscription_email
   - rule: get event
     steps:
-      - intent: get_event
+      - intent: intent_get_event
       - action: action_get_event
   - rule: Provide information about buddies
     steps:
-      - intent: get_buddy
+      - intent: intent_get_buddy
       - action: utter_get_buddy
   - rule: provide info about renting cars
     steps:
-      - intent: car_rental
+      - intent: intent_car_rental
       - action: utter_car_rental
   - rule: Provide general tips for events and trips
     steps:
-      - intent: trip_tips
+      - intent: intent_trip_tips
       - action: utter_trip_tips
   - rule: Provide links to our social media pages
     steps:
-      - intent: social_media
+      - intent: intent_social_media
       - action: utter_social_media
   - rule: Provide info on where to buy SIM card
     steps:
-      - intent: sim_card
+      - intent: intent_sim_card
       - action: utter_sim_card
   - rule: Provide info on Erasmus in Schools
     steps:
-      - intent: eis
+      - intent: intent_eis
       - action: utter_eis

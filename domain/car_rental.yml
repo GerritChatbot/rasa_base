@@ -1,9 +1,17 @@
 ---
 version: '3.1'
-intents: [car_rental]
+intents: [intent_car_rental]
 responses:
   utter_car_rental:
     - text: |-
-        If you want to rent a car, check out [this site](www.rentalcars.com).
-        If you need a car only for a short time, consider carsharing companies such as 
-        [Car4way](www.car4way.cz) or [Autonapůl](www.autonapul.cz).
+        If you want to rent a car, check out Rentalcars.
+        For a short term rental, consider carsharing companies such as 
+        Car4way or Autonapůl.
+      button_type: inline_url
+      buttons:
+        - title: Rentalcars
+          url: "www.rentalcars.com"
+        - title: Car4way
+          url: "www.car4way.cz"
+        - title: Autonapůl
+          url: "www.autonapul.cz"

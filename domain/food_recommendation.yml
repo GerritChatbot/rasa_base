@@ -1,11 +1,14 @@
 ---
 version: '3.1'
-intents: [canteen]
+intents: [intent_canteen]
 responses:
   utter_canteen:
     - text: |-
-        There are six university canteens you can go to, 
-        for example Menza Právnická or Menza Arnošta z Pardubic. 
-        You can find more information here https://kam.cuni.cz/KAMEN-70.html. 
-        Please note that Menza Hostivař and Menza Jednota are closed for reconstruction, 
-        and Menza Na Kotli is not located in Prague!
+        There are 6️⃣ university canteens you can go to. 
+        For example Menza Právnická or Menza Arnošta z Pardubic.
+        
+        Please note that Menza Hostivař and Menza Jednota are closed for reconstruction, and Menza Na Kotli is not located in Prague 😬!
+      button_type: inline_url
+      buttons:
+        - title: List of canteens
+          url: "https://kam.cuni.cz/KAMEN-70.html"
