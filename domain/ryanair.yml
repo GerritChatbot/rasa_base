@@ -1,6 +1,6 @@
 ---
 version: '3.1'
-intents: [ryanair_discount]
+intents: [intent_ryanair_discount]
 responses:
   utter_ryanair_discount:
     - text: |-

@@ -1,6 +1,6 @@
 ---
 version: '3.1'
-intents: [health_issues]
+intents: [intent_health_issues]
 responses:
   utter_health_issues:
     - text: |-

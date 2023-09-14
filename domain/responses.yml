@@ -14,14 +14,6 @@ responses:
     - text: Bye
   utter_iamabot:
     - text: I am a bot, created with love by ESN CU Prague.
-  utter_help:
-    - text: |
-        Right now I know how to do the following, just ask away:
-        👉 find office hours
-        👉 give flat/dorm recommendation
-        👉 where are university canteens
-        👉 help you when you need a doctor
-        👉 and some other things as well!
   utter_youre_welcome:
     - text: You're welcome!
   utter_please_rephrase:
@@ -41,4 +33,4 @@ responses:
       button_type: vertical
       buttons:
         - title: Show office hours
-          payload: /office_hours
+          payload: /intent_office_hours

@@ -1,12 +1,10 @@
 ---
 version: '3.1'
 intents:
-  - bot_challenge
+  - intent_bot_challenge
   - help
-  - goodbye
-  - gratitude
+  - intent_goodbye
+  - intent_gratitude
   - start
-  - out_of_scope
-  - thankyou
-  - buy_esn_card
-  - pay_by_cash
+  - intent_buy_esn_card
+  - intent_pay_by_cash

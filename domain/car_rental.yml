@@ -1,6 +1,6 @@
 ---
 version: '3.1'
-intents: [car_rental]
+intents: [intent_car_rental]
 responses:
   utter_car_rental:
     - text: |-

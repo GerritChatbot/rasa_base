@@ -27,7 +27,7 @@ nlu:
       - sup
       - whatsup
       - how you doin'
-  - intent: goodbye
+  - intent: intent_goodbye
     examples: |
       - cu
       - good by
@@ -39,7 +39,7 @@ nlu:
       - see you around
       - bye bye
       - see you later
-  - intent: bot_challenge
+  - intent: intent_bot_challenge
     examples: |
       - are you a bot?
       - are you a human?
@@ -53,7 +53,7 @@ nlu:
       - what are the things you can do?
       - what are the things you can help me with?
       - what do you do?
-  - intent: office_hours
+  - intent: intent_office_hours
     examples: |
       - when are office hours?
       - what day is office open?
@@ -63,14 +63,14 @@ nlu:
       - give me office hours
       - where is the office
       - how to get to your office
-  - intent: gratitude
+  - intent: intent_gratitude
     examples: |
       - thank you
       - that is very useful
       - thanks
       - thank you for letting me know
       - thanks for the info
-  - intent: health_issues
+  - intent: intent_health_issues
     examples: |
       - what should I do when I need doctor?
       - i’m sick, where can I find help?
@@ -93,7 +93,7 @@ nlu:
       - i need information about opening hours of the hospitals/doctors near me.
       - i am having some health complications, where can I find help?
       - i need an ambulance.
-  - intent: canteen
+  - intent: intent_canteen
     examples: |
       - is there a cheap place to eat near the university?
       - where can i get inexpensive food?
@@ -104,7 +104,7 @@ nlu:
       - where can i eat
       - where can i get lunch at the university?
       - i'm hungry.
-  - intent: esn
+  - intent: intent_esn
     examples: |
       - what is erasmus student network?
       - what does esn do?
@@ -116,7 +116,7 @@ nlu:
       - tell me about esn.
       - i have only now heard of esn what is it
       - please can you elaborate on esn
-  - intent: accommodation
+  - intent: intent_accommodation
     examples: |
       - how can i find accommodation in prague?
       - where am i going to live during my stay?
@@ -132,7 +132,7 @@ nlu:
       - i need housing
       - can i get a place in a dorm
       - do you have any info about dorms in prague
-  - intent: ryanair_discount
+  - intent: intent_ryanair_discount
     examples: |
       - My Ryanair validation on their website doesn’t work, what should I do?
       - I want Ryanair discount, what should I do?
@@ -163,7 +163,7 @@ nlu:
 #    - as ofter as possible
 #    - once a month
 #    - weekly
-  - intent: buy_esn_card
+  - intent: intent_buy_esn_card
     examples: |
       - i want to buy esncard
       - can I get esn card please?
@@ -180,21 +180,21 @@ nlu:
 #    - what email are you using for newsletter?
 #    - where are you sending newsletter?
   # TODO add intent - what_is_my_subscription_frequency
-  - intent: pay_by_cash
+  - intent: intent_pay_by_cash
     examples: |
       - can i pay by cash
       - what if i want to pay by cash
       - is it possible not to pay online
       - i prefer to pay with real money
       - i can only pay cash
-  - intent: get_event
+  - intent: intent_get_event
     examples: |
       - i want to go to [pubquiz](event)
       - can i go to [pub quiz](event)
       - can you tell me about the upcoming [Pub Quiz](event)
       - [pub quiz](event) please
       - give me more information about the [pub quiz](event)
-  - intent: get_buddy
+  - intent: intent_get_buddy
     examples: |
       - i need a buddy
       - where can i find a buddy
@@ -205,7 +205,7 @@ nlu:
       - i would like to be assigned a buddy
       - what is a buddy and where can i get one
       - find a buddy
-  - intent: car_rental
+  - intent: intent_car_rental
     examples: |
       - i want to rent a car
       - i need a car
@@ -213,7 +213,7 @@ nlu:
       - what do i need if i want to rent a car
       - can you recommend a car rental company
       - do you have any info on how to rent cars in prague
-  - intent: trip_tips
+  - intent: intent_trip_tips
     examples: |
       - where can i travel in czech republic
       - what are some parties in prague
@@ -222,7 +222,7 @@ nlu:
       - is there anything cool happening in the city
       - tell me about interesting events happening here
       - where can i find a list of events in prague
-  - intent: social_media
+  - intent: intent_social_media
     examples: |
       - i want to join esn whatsapp group
       - is there some whatsapp group with all the students
@@ -236,7 +236,7 @@ nlu:
       - do you guys have a facebook page
       - can you send me a link to your facebook page
       - what is your instagram username
-  - intent: sim_card
+  - intent: intent_sim_card
     examples: |
       - where can i get sim card
       - i want to buy a sim card
@@ -245,7 +245,7 @@ nlu:
       - sim card
       - i need a card for my phone
       - which sim card is the best
-  - intent: eis
+  - intent: intent_eis
     examples: |
       - what is erasmus in schools
       - i want to join EiS

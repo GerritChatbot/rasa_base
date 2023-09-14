@@ -7,9 +7,9 @@ stories:
       - action: utter_start
       - intent: help
       - action: utter_help
-      - intent: office_hours
-      - action: action_show_office_hours
-      - intent: goodbye
+      - intent: intent_office_hours
+      - action: action_get_office_hours
+      - intent: intent_goodbye
       - action: utter_goodbye
   - story: interactive_story_1
     steps:
@@ -38,7 +38,7 @@ stories:
     steps:
       - intent: start
       - action: utter_start
-      - intent: buy_esn_card
+      - intent: intent_buy_esn_card
       - action: utter_buy_esn_card
-      - intent: pay_by_cash
+      - intent: intent_pay_by_cash
       - action: utter_pay_by_cash

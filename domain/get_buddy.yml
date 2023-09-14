@@ -1,6 +1,6 @@
 ---
 version: '3.1'
-intents: [get_buddy]
+intents: [intent_get_buddy]
 responses:
   utter_get_buddy:
     - text: |-

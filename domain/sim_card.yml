@@ -1,6 +1,6 @@
 ---
 version: '3.1'
-intents: [sim_card]
+intents: [intent_sim_card]
 responses:
   utter_sim_card:
     - text: |-
