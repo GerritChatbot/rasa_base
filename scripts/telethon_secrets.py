@@ -10,7 +10,7 @@ def generate_bot_name() -> str:
 
 
 def temporary_file(bot_name):
-    os.mkdir(os.path.join(os.getcwd(), "temp"))
+    os.makedirs(os.path.join(os.getcwd(), "temp"), exist_ok=True)
     with open('temp/botname.txt', 'w') as file:
         file.write("@"+bot_name+"_bot")
 
