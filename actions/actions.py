@@ -4,54 +4,17 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 import os.path
-# This is a simple example for a custom action which utters "Hello World!"
-
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+import json
 from typing import Any, Text, Dict, List
 import pandas as pd
 from datetime import date
-
-from rasa_sdk.events import SlotSet
+from dateutil.parser import parse
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 #TODO move to some config file as a constant
 full_path = os.path.realpath(__file__)
 actions_dir = os.path.dirname(full_path)
 project_root_dir = os.path.dirname(actions_dir)
-
-
-# class ActionSaySubscriptionEmail(Action):
-#
-#     def name(self) -> Text:
-#         return "action_what_is_my_subscription_email"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         email = tracker.get_slot("email")
-#         if not email:
-#             dispatcher.utter_message(text="I don't know your email.")
-#         else:
-#             dispatcher.utter_message(text=f"Your email is {email}!")
-#         return []
 
 
 class ShowOfficeHoursTime(Action):
@@ -79,6 +42,8 @@ class ShowOfficeHoursTime(Action):
                  f"from {nearest_row_in_future['time_range_start'][0]}h "
                  f"till {nearest_row_in_future['time_range_end'][0]}h ")
         return []
+
+
 class GetEvent(Action):
 
     def name(self) -> Text:
@@ -87,45 +52,32 @@ class GetEvent(Action):
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        event_name = tracker.get_slot("event")
-        print(event_name)
 
-        current_month = date.today().strftime("%B")
-        print(current_month)
-        current_day = date.today().day
-        print(current_day)
+        with open(os.path.join(actions_dir, "events.json")) as events:
+            contents = json.loads(events.read())
 
-        sheets = pd.ExcelFile(os.path.join(project_root_dir, "external_data_test", "events.xlsx")).sheet_names
+        # my_events = [event for event in contents["events"] if event["eventTemplate"]["category"]["id"] == "896575a3-89a7-47da-b80c-113205a7e02a"]
+        for event in contents.get("events"):
+            templateID = event["eventTemplate"]["category"]["id"]
+            if templateID != "896575a3-89a7-47da-b80c-113205a7e02a":
+                break
 
-        # find substring "current_month" in sheets
-        closest_sheet = [sheet for sheet in sheets if current_month in sheet][0]
-        print(closest_sheet)
-        df = pd.read_excel(os.path.join(project_root_dir, "external_data_test", "events.xlsx"),
-                           sheet_name=closest_sheet)
-        print(df.keys())
-        event_data = df[df["EVENT"] == event_name]
-        print(event_data)
-        print(event_data.get("DATE"))
+        title = event.get("title")
+        location = event.get("location")
+        start = event.get("start")
+        datetime_object = parse(start)
+        date = datetime_object.date()
+        time = datetime_object.time()
 
-        df_sort = event_data.iloc[(event_data['DATE'] - current_day).abs().argsort()[:2]]
-        print(df_sort)
-        df_sort_list = df_sort.index.tolist()
+        lat = float(event.get("coordinates").get("lat"))
+        lng = float(event.get("coordinates").get("lng"))
 
-        final_index = [x for x in df_sort_list if x >= current_day]
-        final_data = df.iloc[final_index]
-        final_date = int(final_data["DATE"].values[0])
-        final_event_name = final_data["EVENT"].values[0]
-        final_start_hour = final_data["START"].values[0]
-        final_end_hour = final_data["END"].values[0]
-        final_price = final_data["PRICE"].values[0]
-        final_place = final_data["PLACE"].values[0]
-        final_registration_form = final_data["REGISTRATION FORM\n(link na drive)"].values[0]
-        print(
-            f"The event {final_event_name} is taking place on {final_date}. from {final_start_hour} till {final_end_hour} "
-            f"on the address {final_place}. It costs {final_price} and you can register here: {final_registration_form}")
+        text = f"One of the closest events is '<b>{title}</b>' which takes place on {date} at {time}"
+        dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
 
-        dispatcher.utter_message(
-            text=f"The event {final_event_name} is taking place on {final_date}. from {final_start_hour} till {final_end_hour} "
-            f"on the address {final_place}. It costs {final_price} and you can register here: {final_registration_form}")
+        dispatcher.utter_message(json_message={"latitude": lat, "longitude": lng, "title":"Check capacity before you go!", "address": location})
+
+        text = f"You can check it's capacity, register and pay within <a href='https://cu-prague.esn.world/events'>our app</a>."
+        dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
         return []
 
