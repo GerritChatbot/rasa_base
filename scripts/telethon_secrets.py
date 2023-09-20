@@ -5,7 +5,7 @@ import os
 
 def generate_bot_name() -> str:
     now = datetime.now()
-    bot_name = str(names.get_first_name())+"_"+str(now.year)+"_"+str(now.month)+"_"+str(now.day)+"_"+str(now.hour)+"_"+str(now.minute)
+    bot_name = str(names.get_first_name())+"_"+str(hash(now))
     return bot_name
 
 
