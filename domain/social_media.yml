@@ -1,6 +1,6 @@
 ---
 version: '3.1'
-intents: [social_media]
+intents: [intent_social_media]
 responses:
   utter_social_media:
     - text: |-

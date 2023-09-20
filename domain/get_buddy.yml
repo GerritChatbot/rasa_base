@@ -1,11 +1,12 @@
 ---
 version: '3.1'
-intents: [get_buddy]
+intents: [intent_get_buddy]
 responses:
   utter_get_buddy:
     - text: |-
-        To get a buddy (a local student in your host country to help you with everything you need) 
-        you can register using the link below
+        Buddy is a local student who volunteers to help you with your problems and questions (before and after your arrival). 
+        
+        He or she might also become your first friend 🤝 during your exchange! Use our buddy matching system to get one while you can.
       button_type: vertical_url
       buttons:
         - title: Sign up to get a buddy

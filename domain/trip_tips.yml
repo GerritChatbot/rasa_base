@@ -1,6 +1,6 @@
 ---
 version: '3.1'
-intents: [trip_tips]
+intents: [intent_trip_tips]
 responses:
   utter_trip_tips:
     - text: |-
