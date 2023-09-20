@@ -4,54 +4,17 @@
 # See this guide on how to implement these action:
 # https://rasa.com/docs/rasa/custom-actions
 import os.path
-# This is a simple example for a custom action which utters "Hello World!"
-
-# from typing import Any, Text, Dict, List
-#
-# from rasa_sdk import Action, Tracker
-# from rasa_sdk.executor import CollectingDispatcher
-#
-#
-# class ActionHelloWorld(Action):
-#
-#     def name(self) -> Text:
-#         return "action_hello_world"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         dispatcher.utter_message(text="Hello World!")
-#
-#         return []
+import json
 from typing import Any, Text, Dict, List
 import pandas as pd
 from datetime import date
-
-from rasa_sdk.events import SlotSet
+from dateutil.parser import parse
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 #TODO move to some config file as a constant
 full_path = os.path.realpath(__file__)
 actions_dir = os.path.dirname(full_path)
 project_root_dir = os.path.dirname(actions_dir)
-
-
-# class ActionSaySubscriptionEmail(Action):
-#
-#     def name(self) -> Text:
-#         return "action_what_is_my_subscription_email"
-#
-#     def run(self, dispatcher: CollectingDispatcher,
-#             tracker: Tracker,
-#             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-#
-#         email = tracker.get_slot("email")
-#         if not email:
-#             dispatcher.utter_message(text="I don't know your email.")
-#         else:
-#             dispatcher.utter_message(text=f"Your email is {email}!")
-#         return []
 
 
 class ShowOfficeHoursTime(Action):
@@ -79,6 +42,8 @@ class ShowOfficeHoursTime(Action):
                  f"from {nearest_row_in_future['time_range_start'][0]}h "
                  f"till {nearest_row_in_future['time_range_end'][0]}h ")
         return []
+
+
 class GetEvent(Action):
 
     def name(self) -> Text:
