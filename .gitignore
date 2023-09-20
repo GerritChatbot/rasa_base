@@ -3,3 +3,14 @@
 /.rasa
 /_class_learning
 /models
+# temp folder should be by design deleted, however just in case this does not happen,
+#it is added to ignore (for now it would contain the name of the temporary bot)
+/scripts/temp
+# session files are generated when interacting with telebot which is used to programatically generate chatbots - it
+# might contain sensitive data
+/scripts/session*
+# credentials.yml are added as well - the file is used in deployement for templates, however is also needed when testing
+# the bot locally - accidental push of such credentials (left after testing is done) could reveal api token
+# for given bot. Each bot should be deleted after testing and thus the api token would be useless, however,
+# adding it as a precaution in case
+credentials.yml
