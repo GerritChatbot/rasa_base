@@ -2,8 +2,11 @@
 from telethon import TelegramClient, events
 from telethon_secrets import generate_bot_name, temporary_file
 from getpass import getpass
+from addons.custom_classes import UnexpectedBotFatherResponse
+import logging
 
-
+# both should be available when personal telegram account is authenticated
+# here https://my.telegram.org/auth?to=apps
 api_id = getpass("API id:")
 api_hash = getpass("API hash:")
 
@@ -24,6 +27,9 @@ async def message_handler(event):
         print(f"You can access it at {'https://t.me/'+bot_user_name}")
         temporary_file(bot_name)
         await client.disconnect()
+    else:
+        logging.error(f"The script probably did not expect BotFather to return this: {event.raw_text}")
+        raise UnexpectedBotFatherResponse
 
 
 async def main():

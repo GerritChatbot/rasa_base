@@ -4,7 +4,11 @@ import os.path
 from telethon import TelegramClient, events
 from getpass import getpass
 from telethon_secrets import read_bot_name, remove_temp_dir
+from addons.custom_classes import UnexpectedBotFatherResponse
+import logging
 
+# both should be available when personal telegram account is authenticated
+# here https://my.telegram.org/auth?to=apps
 api_id = getpass("API id:")
 api_hash = getpass("API hash:")
 client = TelegramClient('session', api_id, api_hash)
@@ -18,6 +22,9 @@ async def message_handler(event):
     if 'Choose a bot from the list below:' in event.raw_text:
         await event.message.click(text=bot_name)
         print(event.raw_text)
+    else:
+        logging.error(f"The script probably did not expect BotFather to return this: {event.raw_text}")
+        raise UnexpectedBotFatherResponse
 
 
 # some of the events are not new messages, but just the same message edited
@@ -34,6 +41,9 @@ async def message_handler(event):
         # remove the name of the bot
         remove_temp_dir()
         await client.disconnect()
+    else:
+        logging.error(f"The script probably did not expect BotFather to return this: {event.raw_text}")
+        raise UnexpectedBotFatherResponse
 
 
 async def main():
