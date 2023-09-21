@@ -48,7 +48,7 @@ class GetOfficeHoursTime(Action):
             lat = float(event.get("coordinates").get("lat"))
             lng = float(event.get("coordinates").get("lng"))
 
-            text = f"The next '<b>Office hours</b>' takes place on {date} at {time} on {location}"
+            text = f"The next '<b>ESN Office hours</b>' takes place on {date} at {time} on {location}"
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
 
             dispatcher.utter_message(json_message={"latitude": lat, "longitude": lng, "title":"The magic happens here!", "address": location})
@@ -57,7 +57,7 @@ class GetOfficeHoursTime(Action):
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
         # no event with the correct category ID was found, no Office hours in json
         else:
-            text = f'We are sorry, it seems there are no scheduled Office hours.'
+            text = f'We are sorry, it seems there are no scheduled ESN Office hours.'
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
             text = f"Keep an eye on <a href='https://cu-prague.esn.world/events'>our events app</a> or write me later - there might be some Office hours scheduled soon."
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})

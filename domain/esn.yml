@@ -4,7 +4,7 @@ intents: [intent_esn]
 responses:
   utter_esn:
     - text: |-
-        Erasmus Student Network (ESN) *is* a volunteer organisation which supports 
+        Erasmus Student Network (ESN) is a volunteer organisation which supports 
         international students during their Erasmus exchange 
         through events, guidance, and friendship.
       custom:
