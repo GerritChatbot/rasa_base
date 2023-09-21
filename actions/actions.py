@@ -46,7 +46,7 @@ class GetOfficeHoursTime(Action):
             lat = float(event.get("coordinates").get("lat"))
             lng = float(event.get("coordinates").get("lng"))
 
-            text = f"The next office hours '<b>{title}</b>' which takes place on {date} at {time}"
+            text = f"The next '<b>Office hours</b>' takes place on {date} at {time} on {location}"
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
 
             dispatcher.utter_message(json_message={"latitude": lat, "longitude": lng, "title":"The magic happens here!", "address": location})
