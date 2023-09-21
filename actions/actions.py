@@ -7,13 +7,14 @@ import os.path
 import json
 from typing import Any, Text, Dict, List
 from dateutil.parser import parse
+import pytz
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 #TODO move to some config file as a constant
 full_path = os.path.realpath(__file__)
 actions_dir = os.path.dirname(full_path)
 project_root_dir = os.path.dirname(actions_dir)
-
+prague_timezone = pytz.timezone('Europe/Prague')
 
 class GetOfficeHoursTime(Action):
 
@@ -40,6 +41,7 @@ class GetOfficeHoursTime(Action):
             location = event.get("location")
             start = event.get("start")
             datetime_object = parse(start)
+            datetime_object = datetime_object.astimezone(prague_timezone)
             date = datetime_object.date()
             time = datetime_object.time()
 
@@ -84,6 +86,7 @@ class GetEvent(Action):
         location = event.get("location")
         start = event.get("start")
         datetime_object = parse(start)
+        datetime_object = datetime_object.astimezone(prague_timezone)
         date = datetime_object.date()
         time = datetime_object.time()
 
