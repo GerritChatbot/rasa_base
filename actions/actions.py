@@ -6,8 +6,6 @@
 import os.path
 import json
 from typing import Any, Text, Dict, List
-import pandas as pd
-from datetime import date
 from dateutil.parser import parse
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
