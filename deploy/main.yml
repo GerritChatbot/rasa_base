@@ -37,7 +37,7 @@
       ansible.builtin.cron:
         name: Run fetch_events_app_data.py
         # to be run every 60th minute
-        minute: "60"
+        minute: "59"
         job: "/bin/python3 /root/rasa_base/addons/fetch_events_app_data.py"
     - name: Deploy rasa
       tags: deploy
