@@ -194,6 +194,14 @@ nlu:
       - can you tell me about the upcoming [Pub Quiz](event)
       - [pub quiz](event) please
       - give me more information about the [pub quiz](event)
+      - where can i travel in czech republic
+      - what are some parties in prague
+      - interesting places to visit
+      - do you have any tips on where to take a trip in the country
+      - is there anything cool happening in the city
+      - tell me about interesting events happening here
+      - where can i find a list of events in prague
+      - what events are you organizing
   - intent: intent_get_buddy
     examples: |
       - i need a buddy
@@ -213,15 +221,6 @@ nlu:
       - what do i need if i want to rent a car
       - can you recommend a car rental company
       - do you have any info on how to rent cars in prague
-  - intent: intent_trip_tips
-    examples: |
-      - where can i travel in czech republic
-      - what are some parties in prague
-      - interesting places to visit
-      - do you have any tips on where to take a trip in the country
-      - is there anything cool happening in the city
-      - tell me about interesting events happening here
-      - where can i find a list of events in prague
   - intent: intent_social_media
     examples: |
       - i want to join esn whatsapp group
