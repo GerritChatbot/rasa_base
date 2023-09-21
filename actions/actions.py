@@ -7,13 +7,14 @@ import os.path
 import json
 from typing import Any, Text, Dict, List
 from dateutil.parser import parse
+import pytz
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 #TODO move to some config file as a constant
 full_path = os.path.realpath(__file__)
 actions_dir = os.path.dirname(full_path)
 project_root_dir = os.path.dirname(actions_dir)
-
+prague_timezone = pytz.timezone('Europe/Prague')
 
 class GetOfficeHoursTime(Action):
 
@@ -40,13 +41,14 @@ class GetOfficeHoursTime(Action):
             location = event.get("location")
             start = event.get("start")
             datetime_object = parse(start)
+            datetime_object = datetime_object.astimezone(prague_timezone)
             date = datetime_object.date()
             time = datetime_object.time()
 
             lat = float(event.get("coordinates").get("lat"))
             lng = float(event.get("coordinates").get("lng"))
 
-            text = f"The next '<b>Office hours</b>' takes place on {date} at {time} on {location}"
+            text = f"The next '<b>ESN Office hours</b>' takes place on {date} at {time} on {location}"
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
 
             dispatcher.utter_message(json_message={"latitude": lat, "longitude": lng, "title":"The magic happens here!", "address": location})
@@ -55,7 +57,7 @@ class GetOfficeHoursTime(Action):
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
         # no event with the correct category ID was found, no Office hours in json
         else:
-            text = f'We are sorry, it seems there are no scheduled Office hours.'
+            text = f'We are sorry, it seems there are no scheduled ESN Office hours.'
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
             text = f"Keep an eye on <a href='https://cu-prague.esn.world/events'>our events app</a> or write me later - there might be some Office hours scheduled soon."
             dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
@@ -84,6 +86,7 @@ class GetEvent(Action):
         location = event.get("location")
         start = event.get("start")
         datetime_object = parse(start)
+        datetime_object = datetime_object.astimezone(prague_timezone)
         date = datetime_object.date()
         time = datetime_object.time()
 

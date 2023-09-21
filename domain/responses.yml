@@ -8,7 +8,7 @@ responses:
       buttons:
         - title: How can you help?
           payload: /help
-        - title: When are office hours?
+        - title: When are ESN Office hours?
           payload: /intent_office_hours
   utter_help:
     - custom:
@@ -17,7 +17,7 @@ responses:
         reply_markup: '{"inline_keyboard": 
         [
         [{"text": "Buddy", "callback_data": "/intent_get_buddy"}, {"text": "Events", "callback_data": "/intent_get_events"}, {"text": "ESNcard", "callback_data": "/intent_buy_esn_card"}, {"text": "SIM card", "callback_data": "/intent_sim_card"}],
-        [{"text": "Office hours", "callback_data": "/intent_office_hours"}],
+        [{"text": "ESN Office hours", "callback_data": "/intent_office_hours"}],
         [{"text": "Housing", "callback_data": "/intent_accommodation"}, {"text": "Canteen", "callback_data": "/intent_canteen"}],
         [{"text": "Doctor", "callback_data": "/intent_health_issues"}]
         ]
@@ -32,7 +32,7 @@ responses:
     - text: I'm sorry, I didn't quite understand that. Could you rephrase?
   utter_buy_esn_card:
     - custom:
-        text: 'ESNcard costs 300 CZK. You can pay for via our <a href="https://cu-prague.esn.world/events/4d413869-c3e7-4439-ac7e-a5a9a6630a08">events app</a> and pick it up during our office hours.'
+        text: 'ESNcard costs 300 CZK. You can pay for it via our <a href="https://cu-prague.esn.world/events/4d413869-c3e7-4439-ac7e-a5a9a6630a08">events app</a> and pick it up during our ESN Office hours.'
         parse_mode: "html"
         reply_markup: '{"inline_keyboard": [[{"text": "When are the office hours?", "callback_data": "/intent_office_hours"}],[{"text": "Can I pay cash?", "callback_data": "/intent_pay_by_cash"}]]}'
   utter_pay_by_cash:
