@@ -6,8 +6,6 @@
 import os.path
 import json
 from typing import Any, Text, Dict, List
-import pandas as pd
-from datetime import date
 from dateutil.parser import parse
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
@@ -17,30 +15,50 @@ actions_dir = os.path.dirname(full_path)
 project_root_dir = os.path.dirname(actions_dir)
 
 
-class ShowOfficeHoursTime(Action):
+class GetOfficeHoursTime(Action):
 
     def name(self) -> Text:
-        return "action_show_office_hours"
+        return "action_get_office_hours"
 
     def run(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        df = pd.read_excel(os.path.join(project_root_dir, "external_data_test", "office_hours.xlsx"))
-        df['date'] = pd.to_datetime(df['date'], format='%d%m%Y')
-        df = df.set_index('date')
 
-        #TODO turn into a function that I can reuse to search for nearest date?
-        today = date.today()
-        d1 = pd.to_datetime(today)
+        with open(os.path.join(actions_dir, "events.json")) as events:
+            contents = json.loads(events.read())
 
-        index_of_nearest_row_in_future = df.index.get_indexer([d1], method='bfill')
-        nearest_row_in_future = df.iloc[index_of_nearest_row_in_future].reset_index()
+        event_exists_flag = False
+        for event in contents.get("events"):
+            templateID = event["eventTemplate"]["category"]["id"]
+            # templateID of office hours category
+            if templateID == "20397038-f186-4cb1-ab88-8ea23b318898":
+                event_exists_flag = True
+                break
 
-        dispatcher.utter_message(
-            text=f"The office address is Jednota Dormitory, Opletalova 1663/38 and the nearest office hours are on "
-                 f"{nearest_row_in_future['date'][0].strftime('%d/%m/%Y')} "
-                 f"from {nearest_row_in_future['time_range_start'][0]}h "
-                 f"till {nearest_row_in_future['time_range_end'][0]}h ")
+        if event_exists_flag:
+            title = event.get("title")
+            location = event.get("location")
+            start = event.get("start")
+            datetime_object = parse(start)
+            date = datetime_object.date()
+            time = datetime_object.time()
+
+            lat = float(event.get("coordinates").get("lat"))
+            lng = float(event.get("coordinates").get("lng"))
+
+            text = f"The next office hours '<b>{title}</b>' which takes place on {date} at {time}"
+            dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
+
+            dispatcher.utter_message(json_message={"latitude": lat, "longitude": lng, "title":"The magic happens here!", "address": location})
+
+            text = f"For more info about the other events, you can check <a href='https://cu-prague.esn.world/events'>our app</a>."
+            dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
+        # no event with the correct category ID was found, no Office hours in json
+        else:
+            text = f'We are sorry, it seems there are no scheduled Office hours.'
+            dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
+            text = f"Keep an eye on <a href='https://cu-prague.esn.world/events'>our events app</a> or write me later - there might be some Office hours scheduled soon."
+            dispatcher.utter_message(json_message={"text": text, "parse_mode": "HTML"})
         return []
 
 
@@ -59,7 +77,7 @@ class GetEvent(Action):
         # my_events = [event for event in contents["events"] if event["eventTemplate"]["category"]["id"] == "896575a3-89a7-47da-b80c-113205a7e02a"]
         for event in contents.get("events"):
             templateID = event["eventTemplate"]["category"]["id"]
-            if templateID != "896575a3-89a7-47da-b80c-113205a7e02a":
+            if templateID not in ["896575a3-89a7-47da-b80c-113205a7e02a", "20397038-f186-4cb1-ab88-8ea23b318898"]:
                 break
 
         title = event.get("title")
