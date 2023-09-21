@@ -86,10 +86,6 @@ rules:
     steps:
       - intent: intent_car_rental
       - action: utter_car_rental
-  - rule: Provide general tips for events and trips
-    steps:
-      - intent: intent_trip_tips
-      - action: utter_trip_tips
   - rule: Provide links to our social media pages
     steps:
       - intent: intent_social_media
