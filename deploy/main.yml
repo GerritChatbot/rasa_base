@@ -35,7 +35,7 @@
       ansible.builtin.shell: /bin/python3 /root/rasa_base/addons/fetch_events_app_data.py
     - name: Schedule cron job
       ansible.builtin.cron:
-        name: "Run fetch_events_app_data.py"
+        name: Run fetch_events_app_data.py
         # to be run every 60th minute
         minute: "60"
         job: "/bin/python3 /root/rasa_base/addons/fetch_events_app_data.py"
