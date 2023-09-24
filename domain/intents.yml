@@ -8,5 +8,4 @@ intents:
   - start
   - out_of_scope
   - intent_thankyou
-  - intent_buy_esn_card
   - intent_pay_by_cash

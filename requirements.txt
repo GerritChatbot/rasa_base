@@ -3,3 +3,4 @@ rasa-sdk
 openpyxl
 pandas
 telethon
+gql
