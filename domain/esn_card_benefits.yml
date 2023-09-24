@@ -1,0 +1,14 @@
+---
+version: '3.1'
+intents: [intent_esn_card_benefits]
+responses:
+  utter_esn_card_benefits:
+    - custom:
+        text: 'ESNcard is a membership card during your exchange. You get a 100CZK discount for all events organized by ESN CU Prague and you can use all the discounts and benefits of all our partners.
+        In addition, you can get all these discounts with any other ESN section in the world as well their partners!
+        
+        You can find all ESN CU Prague partners on <a href="https://esncuprague.cz/partners/local">our website</a>, or all the partners from all over the world on <a href="https://esncard.org/">esncard.org</a>.'
+        parse_mode: "html"
+        reply_markup: '{"inline_keyboard": [
+        [{"text": "I want to buy ESNcard", "callback_data": "/intent_buy_esn_card"}]
+        ]}'

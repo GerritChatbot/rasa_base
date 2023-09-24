@@ -259,3 +259,10 @@ nlu:
       - how can i sign up for erasmus in schools
       - how does eis work
       - who can join erasmus in schools
+  - intent: intent_esn_card_benefits
+    examples: |
+      - what is ESNcard
+      - why do I need esn card
+      - what are the esn card benefits
+      - what partners does esn card have
+      - what are the discounts with esn card
