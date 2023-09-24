@@ -27,6 +27,7 @@ nlu:
       - sup
       - whatsup
       - how you doin'
+      - Yo
   - intent: intent_goodbye
     examples: |
       - cu
@@ -132,6 +133,7 @@ nlu:
       - i need housing
       - can i get a place in a dorm
       - do you have any info about dorms in prague
+      - Hey everone! I ll be studying at CU next semester and I am looking for a flat If you know sth, let me know
   - intent: intent_ryanair_discount
     examples: |
       - My Ryanair validation on their website doesn’t work, what should I do?
@@ -213,6 +215,7 @@ nlu:
       - i would like to be assigned a buddy
       - what is a buddy and where can i get one
       - find a buddy
+      - i want to have a buddy
   - intent: intent_car_rental
     examples: |
       - i want to rent a car
@@ -235,6 +238,9 @@ nlu:
       - do you guys have a facebook page
       - can you send me a link to your facebook page
       - what is your instagram username
+      - Social media accounts
+      - Do you have any social media accounts
+      - what is your website
   - intent: intent_sim_card
     examples: |
       - where can i get sim card
