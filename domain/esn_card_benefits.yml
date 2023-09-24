@@ -9,6 +9,7 @@ responses:
         
         You can find all ESN CU Prague partners on <a href="https://esncuprague.cz/partners/local">our website</a>, or all the partners from all over the world on <a href="https://esncard.org/">esncard.org</a>.'
         parse_mode: "html"
+        disable_web_page_preview: True
         reply_markup: '{"inline_keyboard": [
         [{"text": "I want to buy ESNcard", "callback_data": "/intent_buy_esn_card"}]
         ]}'

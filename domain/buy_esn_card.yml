@@ -6,7 +6,6 @@ responses:
     - custom:
         text: 'ESNcard costs 300 CZK. You can pay for it via our <a href="https://cu-prague.esn.world/events/4d413869-c3e7-4439-ac7e-a5a9a6630a08">events app</a> and pick it up during our ESN Office hours.'
         parse_mode: "html"
-        disable_web_page_preview: True
         reply_markup: '{"inline_keyboard": [
         [{"text": "When are the office hours?", "callback_data": "/intent_office_hours"}],
         [{"text": "Can I pay cash?", "callback_data": "/intent_pay_by_cash"}], 
