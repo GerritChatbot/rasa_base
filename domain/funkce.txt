@@ -1,0 +1,20 @@
+1.	Bot se představí, když ho uživatel pozdraví.
+2.	Bot se rozloučí, když se s ním uživatel rozloučí.
+3.	Pokud ho uživatel vyzve, oznámí mu, že je bot.
+4.	Řekne uživateli, kdy je otevřeno, když se ho uživatel zeptá.
+5.	Řekne, rádo se stalo, pokud mu uživatel poděkuje.
+6.	Na požádání uvede informace o zdravotní péči
+7.	Odpoví na otázky ohledně univerzitní jídelny. 
+8.	Na požádání uvede informace o ESN 
+9.	Na požádání uvede informace o ubytování
+10.	Požádá uživatele, aby přeformuloval otázku, pokud si není jistý odpovědí
+11.	Odpoví na Ryanair slevu
+12.	Pokud uživatel chce zaplatit hotovostí, poskytnout informace o ESN
+13.	poskytnout informace o přátelích (buddies)
+14.	Poskytnout informace o pronájmu automobilů 
+15.	Poskytněte obecné tipy na akce a výlety 
+16.	Poskytněte odkazy na naše weby sociálních médií
+17.	Poskytněte informaci, kde koupit SIM kartu 
+18.	Poskytne informaci o Erasmu ve školách
+
+
