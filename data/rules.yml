@@ -101,4 +101,5 @@ rules:
   - rule: Say 'You are welcome' when user is happy with the info provided
     steps:
       - intent: intent_esn_card_benefits
+
       - action: utter_esn_card_benefits
