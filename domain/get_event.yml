@@ -1,12 +1,14 @@
 ---
 version: '3.1'
-entities: [event]
 intents: [intent_get_event]
-actions: [action_get_event]
-slots:
-  event:
-    type: text
-    influence_conversation: true
-    mappings:
-      - type: from_entity
-        entity: event
+responses:
+  utter_get_event:
+    - text: |-
+        All of our events are listed in our events app. Be sure check it to find more about all the things we are 
+        organising as well as some other activities organised by our friends and partners!
+        
+        We add new events regularly, so if you don't find what you have been looking for, try in a few days.
+      button_type: vertical_url
+      buttons:
+        - title: Here are all our planned events
+          url: "https://cu-prague.esn.world/events'"
