@@ -191,11 +191,11 @@ nlu:
       - i can only pay cash
   - intent: intent_get_event
     examples: |
-      - i want to go to [pubquiz](event)
+      - i want to go to [party](event)
       - can i go to [pub quiz](event)
-      - can you tell me about the upcoming [Pub Quiz](event)
-      - [pub quiz](event) please
-      - give me more information about the [pub quiz](event)
+      - can you tell me about the upcoming [events](event)
+      - how do i get to the [welcome party](event) please
+      - give me more information about the [trips](event)
       - where can i travel in czech republic
       - what are some parties in prague
       - interesting places to visit
@@ -204,6 +204,7 @@ nlu:
       - tell me about interesting events happening here
       - where can i find a list of events in prague
       - what events are you organizing
+      - are there any trips soon
   - intent: intent_get_buddy
     examples: |
       - i need a buddy
