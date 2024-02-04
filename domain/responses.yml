@@ -4,6 +4,19 @@ responses:
   utter_start:
     - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you
         need.
+      channel: custom_telegram
+      button_type: vertical
+      buttons:
+        - title: How can you help?
+          payload: /help
+        - title: When are ESN Office hours?
+          payload: /intent_office_hours
+    - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you
+        need.
+      channel: twilio
+    - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you
+        need.
+      channel: facebook
       button_type: vertical
       buttons:
         - title: How can you help?

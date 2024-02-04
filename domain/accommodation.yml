@@ -7,6 +7,7 @@ responses:
       
         An alternative is to search through facebook groups or specialised websites
         such as Flatio, forStudents or Bezrealitky. Just be careful with deposits, we had cases of scammers in the past.
+      channel: custom_telegram
       button_type: vertical_url
       buttons:
         - title: University housing
@@ -17,3 +18,31 @@ responses:
           url: "www.forstudents.cz"
         - title: BezRealitky
           url: "www.bezrealitky.com"
+    - text: Charles University offers dormitory spots for students, but these are often quickly gone. 
+      
+        An alternative is to search through facebook groups or specialised websites
+        such as Flatio, forStudents or Bezrealitky. Just be careful with deposits, we had cases of scammers in the past.
+      channel: twilio
+
+    - text: Charles University offers dormitory spots for students, but these are often quickly gone. 
+      
+        An alternative is to search through facebook groups or specialised websites
+        such as Flatio, forStudents or Bezrealitky. Just be careful with deposits, we had cases of scammers in the past.
+      elements:
+        - title: University housing
+          buttons:
+            - title: Visit page
+              url: "www.cuni.cz/UKEN-365.html#1"
+        - title: Flatio
+          buttons:
+            - title: Visit page
+              url: "www.flatio.com/#_ga"
+        - title: forStudents
+          buttons:
+            - title: Visit page
+              url: "www.forstudents.cz"
+        - title: BezRealitky
+          buttons:
+            - title: Visit page
+              url: "www.bezrealitky.com"
+      channel: facebook
