@@ -11,6 +11,8 @@ droplet_ip: "{{ lookup('ansible.builtin.env', 'DROPLET_IP', default='159.89.27.1
 
 # other vars
 telegram_token: "{{ lookup('ansible.builtin.env', 'TELEGRAM_TOKEN', default='changeme') }}"
+facebook_page_access_token: "{{ lookup('ansible.builtin.env', 'FACEBOOK_PAGE_ACCESS_TOKEN', default='changeme') }}"
+facebook_secret: "{{ lookup('ansible.builtin.env', 'FACEBOOK_SECRET', default='changeme') }}"
 
 # database information
 db_url: "{{ lookup('ansible.builtin.env', 'DB_URL', default='db-postgresql-fra1-25724-do-user-13964305-0.b.db.ondigitalocean.com') }}"
