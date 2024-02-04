@@ -31,8 +31,8 @@
           ansible.builtin.template:
             src: templates/endpoints.yml.j2
             dest: '{{ checkout_path }}/endpoints.yml'
-    - name: Make an initial events fetch
-      ansible.builtin.shell: /bin/python3 /root/rasa_base/addons/fetch_events_app_data.py
+ #   - name: Make an initial events fetch
+ #     ansible.builtin.shell: /bin/python3 /root/rasa_base/addons/fetch_events_app_data.py
     - name: Schedule cron job
       ansible.builtin.cron:
         name: Run fetch_events_app_data.py
