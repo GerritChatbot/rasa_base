@@ -15,3 +15,19 @@ responses:
           url: "www.car4way.cz"
         - title: Autonapůl
           url: "www.autonapul.cz"
+      channel: custom_telegram
+    - text: |-
+        If you want to rent a car, check out Rentalcars.
+        For a short term rental, consider carsharing companies such as 
+        Car4way or Autonapůl.
+      buttons:
+        - title: Rentalcars
+          type: web_url
+          url: www.rentalcars.com
+        - title: Car4way
+          type: web_url
+          url: www.car4way.cz
+        - title: Autonapůl
+          type: web_url
+          url: www.autonapul.cz
+      channel: facebook

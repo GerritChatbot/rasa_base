@@ -10,3 +10,12 @@ responses:
       buttons:
         - title: SIM card info
           url: "https://esncuprague.cz/sim-cards"
+      channel: custom_telegram
+    - text: |-
+        We offer a pre-paid Vodafone SIM card especially designed for incoming foreign students!
+        You can read more about it on our website.
+      buttons:
+        - title: SIM card info
+          type: web_url
+          url: https://esncuprague.cz/sim-cards
+      channel: facebook

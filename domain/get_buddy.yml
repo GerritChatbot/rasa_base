@@ -11,3 +11,12 @@ responses:
       buttons:
         - title: Sign up to get a buddy
           url: "https://cuni.broaddy.com/register/international"
+    - text: |-
+        Buddy is a local student who volunteers to help you with your problems and questions (before and after your arrival). 
+        
+        He or she might also become your first friend 🤝 during your exchange! Use our buddy matching system to get one while you can.
+      buttons:
+        - title: Get a Buddy
+          type: web_url
+          url: https://cuni.broaddy.com/register/international
+      channel: facebook

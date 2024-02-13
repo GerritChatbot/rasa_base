@@ -41,7 +41,7 @@ rules:
   - rule: Ask the user to rephrase whenever they send a message with low NLU confidence
     steps:
       - intent: nlu_fallback
-      - action: utter_please_rephrase
+      - action: custom_nlu_fallback
   - rule: Give answer about Ryanair discount
     steps:
       - intent: intent_ryanair_discount

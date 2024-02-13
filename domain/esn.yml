@@ -12,3 +12,13 @@ responses:
         longitude: 14.4469256
         title: "ESN office"
         address: "Slavíkova 1499/22, 130 00 Praha 3 - Žižkov, Česko"
+      channel: custom_telegram
+    - text: |-
+        Erasmus Student Network (ESN) is a volunteer organisation which supports 
+        international students during their Erasmus exchange 
+        through events, guidance, and friendship.
+      buttons:
+        - title: ESN office
+          type: web_url
+          url: https://maps.app.goo.gl/WDjJW2D6FuoNLuf39
+      channel: facebook

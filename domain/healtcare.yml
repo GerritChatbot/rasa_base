@@ -16,3 +16,18 @@ responses:
       buttons:
         - title: List of hospitals
           url: "https://en.wikipedia.org/wiki/List_of_hospitals_in_the_Czech_Republic"
+      channel: custom_telegram
+    - text: |-
+        In case you need an ambulance, please call 155 and state your emergency.
+        
+        You can also contact MUDr. Květoslava Vernerová who has an office near Hostivař.
+        
+        In case you need a hospital, you can take a look at the list 👇.
+      buttons:
+        - title: Call doctor
+          type: phone_number
+          payload: "+420 274 869 934"
+        - title: List of hospitals
+          type: web_url
+          url: https://en.wikipedia.org/wiki/List_of_hospitals_in_the_Czech_Republic
+      channel: facebook

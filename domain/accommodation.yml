@@ -29,20 +29,21 @@ responses:
         An alternative is to search through facebook groups or specialised websites
         such as Flatio, forStudents or Bezrealitky. Just be careful with deposits, we had cases of scammers in the past.
       elements:
-        - title: University housing
-          buttons:
-            - title: Visit page
-              url: "www.cuni.cz/UKEN-365.html#1"
-        - title: Flatio
-          buttons:
-            - title: Visit page
-              url: "www.flatio.com/#_ga"
-        - title: forStudents
-          buttons:
-            - title: Visit page
-              url: "www.forstudents.cz"
-        - title: BezRealitky
-          buttons:
-            - title: Visit page
-              url: "www.bezrealitky.com"
+       - title: Uni dorms
+         subtitle: Subtitles are supported
+         buttons:
+           - title: Visit page
+             type: web_url
+             url: www.cuni.cz/UKEN-365.html#1
+       - title: Flatio
+         subtitle: Subtitles are supported
+         buttons:
+           - title: visit page
+             type: web_url
+             url: www.flatio.com/#_ga
+       - title: forStudents
+         subtitle: Subtitles are supported
+         buttons:
+           - title: Visit page
+             type: web_url
       channel: facebook

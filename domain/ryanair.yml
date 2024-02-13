@@ -11,3 +11,13 @@ responses:
       buttons:
         - title: Register ESNcard
           url: "http://esncard.org"
+      channel: custom_telegram
+    - text: |-
+        For the Ryanair discount, you have to register your ESNcard.
+        Then you have to log into Ryanair, go to ERASMUS column and fill in your personal details. 
+        You have to make sure that your personal details are the same as what you have in your ESNcard registration.
+      buttons:
+        - title: Register ESNcard
+          type: web_url
+          url: http://esncard.org
+      channel: facebook

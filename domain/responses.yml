@@ -2,7 +2,7 @@
 version: '3.1'
 responses:
   utter_start:
-    - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you
+    - text: Hey! I'm Gerrit, your virtual buddy! Feel free to ask me whatever you
         need.
       channel: custom_telegram
       button_type: vertical
@@ -14,15 +14,12 @@ responses:
     - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you
         need.
       channel: twilio
-    - text: Hey! I am Gerrit, your virtual buddy! Feel free to ask me whatever you
-        need.
-      channel: facebook
-      button_type: vertical
-      buttons:
-        - title: How can you help?
+    - text: Hey! 👋 I'm Gerrit, your virtual buddy! Feel free to ask me whatever you
+        need 😇.
+      quick_replies:
+        - title: How can you help me?
           payload: /help
-        - title: When are ESN Office hours?
-          payload: /intent_office_hours
+      channel: facebook
   utter_help:
     - custom:
         text: 'Right now I know how to help you with these <tg-emoji emoji-id="1">👇</tg-emoji> topics, just ask away <tg-emoji emoji-id="2">😉</tg-emoji>.'
@@ -35,6 +32,19 @@ responses:
         [{"text": "Doctor", "callback_data": "/intent_health_issues"}]
         ]
         }'
+    - text: Right now I know how to help you with these topics, just ask away.
+      quick_replies:
+        - title: Buddy
+          payload: /intent_get_buddy
+        - title: ESNcard
+          payload: /intent_buy_esn_card
+        - title: Housing
+          payload: /intent_accommodation
+        - title: Canteens
+          payload: /intent_canteen
+        - title: Doctor
+          payload: /intent_health_issues
+      channel: facebook
   utter_goodbye:
     - text: Bye
   utter_iamabot:

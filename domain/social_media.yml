@@ -10,3 +10,12 @@ responses:
       buttons:
         - title: Linktree
           url: "https://linktr.ee/esncuprague"
+      channel: custom_telegram
+    - text: |-
+        You can access all our social media pages via our Linktree page.
+        Connect with fellow students and stay updated on all our activities!
+      buttons:
+        - title: Linktree
+          type: web_url
+          url: https://linktr.ee/esncuprague
+      channel: facebook
