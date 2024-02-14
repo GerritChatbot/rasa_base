@@ -31,14 +31,6 @@
           ansible.builtin.template:
             src: templates/endpoints.yml.j2
             dest: '{{ checkout_path }}/endpoints.yml'
-    - name: Make an initial events fetch
-      ansible.builtin.shell: /bin/python3 /root/rasa_base/addons/fetch_events_app_data.py
-    - name: Schedule cron job
-      ansible.builtin.cron:
-        name: Run fetch_events_app_data.py
-        # to be run every 60th minute
-        minute: "59"
-        job: "/bin/python3 /root/rasa_base/addons/fetch_events_app_data.py"
     - name: Deploy rasa
       tags: deploy
       block:
@@ -61,3 +53,11 @@
             2>&1 &
           args:
             chdir: '{{ checkout_path }}'
+    - name: Make an initial events fetch
+      ansible.builtin.shell: /bin/python3 /root/rasa_base/addons/fetch_events_app_data.py
+    - name: Schedule cron job
+      ansible.builtin.cron:
+        name: Run fetch_events_app_data.py
+        # to be run every 60th minute
+        minute: "59"
+        job: "/bin/python3 /root/rasa_base/addons/fetch_events_app_data.py"
