@@ -36,7 +36,7 @@
       block:
         - name: install python deps
           ansible.builtin.shell: python3 -m pip install rasa rasa-sdk openpyxl pandas pyTelegramBotAPI gql
-            --no-cache-dir --break-system-packages
+            --no-cache-dir
           args:
             chdir: '{{ checkout_path }}'
         - name: train model
