@@ -15,7 +15,7 @@ facebook_page_access_token: "{{ lookup('ansible.builtin.env', 'FACEBOOK_PAGE_ACC
 facebook_secret: "{{ lookup('ansible.builtin.env', 'FACEBOOK_SECRET', default='changeme') }}"
 
 # database information
-db_url: "{{ lookup('ansible.builtin.env', 'DB_URL', default='db-postgresql-fra1-25724-do-user-13964305-0.b.db.ondigitalocean.com') }}"
+db_url: "{{ lookup('ansible.builtin.env', 'DB_URL', default='db-postgresql-fra1-30242-do-user-13964305-0.b.db.ondigitalocean.com') }}"
 db_port: "{{ lookup('ansible.builtin.env', 'DB_PORT', default='25060') }}"
 db_name: "{{ lookup('ansible.builtin.env', 'DB_NAME', default='defaultdb') }}"
 db_username: "{{ lookup('ansible.builtin.env', 'DB_USERNAME', default='doadmin') }}"
